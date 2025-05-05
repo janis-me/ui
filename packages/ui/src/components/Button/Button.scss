@@ -1,0 +1,15 @@
+.themed-ui__button {
+  &__root {
+    background-color: themed('gray-1');
+    color: themed('gray-12');
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+
+    &:hover {
+      background-color: themed('gray-2');
+    }
+  }
+}

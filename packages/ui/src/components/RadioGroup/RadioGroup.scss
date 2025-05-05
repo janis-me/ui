@@ -1,0 +1,16 @@
+.themed-ui__checkbox {
+  &__root {
+    background-color: transparent;
+    width: themed('size-24');
+    height: themed('size-24');
+    border-radius: themed('size-4');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid themed('gray-6');
+  }
+
+  &__indicator {
+    color: themed('gray-12');
+  }
+}

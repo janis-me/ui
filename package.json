@@ -1,6 +1,6 @@
 {
-  "name": "@janis.me/repo-starter",
-  "description": "A starter template for pnpm-based web repositories",
+  "name": "@janis.me/ui-repo",
+  "description": "UI primitives, styled with @janis.me/themed",
   "keywords": [
     "janis.me"
   ],
@@ -9,6 +9,8 @@
   "author": "Janis Jansen",
   "type": "module",
   "scripts": {
+    "build": "pnpm --filter=@janis.me/ui build",
+    "build:watch": "pnpm --filter=@janis.me/ui build:watch",
     "deps": "pnpm taze",
     "format": "prettier --write .",
     "lint": "eslint --flag unstable_config_lookup_from_file .",

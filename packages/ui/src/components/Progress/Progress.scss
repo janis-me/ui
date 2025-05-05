@@ -1,0 +1,19 @@
+.themed-ui__progress {
+  &__root {
+    background-color: transparent;
+    width: 100%;
+    height: themed('size-24');
+    border-radius: themed('size-4');
+
+    /* Fix overflow clipping in Safari */
+    /* https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0 */
+    transform: translateZ(0);
+  }
+
+  &__indicator {
+    background-color: themed('primary-9');
+    width: 100%;
+    height: 100%;
+    transition: transform 100ms ease-in-out;
+  }
+}
