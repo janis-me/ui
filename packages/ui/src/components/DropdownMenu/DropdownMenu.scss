@@ -1,9 +1,11 @@
-.themed-ui__dropdown {
+.themed-ui__dropdown-menu {
   &__content,
   &__sub-content {
     overflow: hidden;
+    min-width: 220px;
     border-radius: themed('size-4');
     padding: themed('size-6');
+    background-color: themed('gray-2');
   }
 
   &__item,
@@ -17,7 +19,7 @@
 
     height: themed('size-24');
     color: themed('gray-12');
-    padding: 0 themed('size-6') 0 themed('size-24');
+    padding: 0 themed('size-8') 0 themed('size-24');
 
     &[data-disabled] {
       color: themed('gray-6');
@@ -52,5 +54,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__arrow {
+    fill: themed('gray-2');
   }
 }
