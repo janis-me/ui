@@ -1,6 +1,7 @@
 import eslint from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import storybook from 'eslint-plugin-storybook';
 import tseslint, { ConfigArray } from 'typescript-eslint';
 
 export const baseConfig: ConfigArray = tseslint.config(
@@ -61,6 +62,15 @@ export const reactConfig: ConfigArray = tseslint.config(
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],
   reactHooks.configs['recommended-latest'],
+);
+
+export const storybookConfig: ConfigArray = tseslint.config(
+  ...baseConfig,
+  // @ts-expect-error https://github.com/jsx-eslint/eslint-plugin-react/issues/3878
+  ...storybook.configs['flat/recommended'],
+  {
+    ignores: ['!.storybook'],
+  },
 );
 
 export { eslint, tseslint };

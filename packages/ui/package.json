@@ -23,14 +23,13 @@
   },
   "devDependencies": {
     "@janis.me/linter-config": "workspace:*",
-    "@janis.me/typescript-config": "workspace:*",
-    "prettier": "catalog:format"
+    "@janis.me/typescript-config": "workspace:*"
   },
   "peerDependencies": {
-    "sass": "catalog:build",
     "@types/react": "catalog:react",
     "@types/react-dom": "catalog:react",
     "react": "catalog:react",
-    "react-dom": "catalog:react"
+    "react-dom": "catalog:react",
+    "sass": "catalog:build"
   }
 }

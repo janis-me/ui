@@ -10,6 +10,7 @@
     "@eslint/js": "catalog:lint",
     "@janis.me/typescript-config": "workspace:*",
     "@types/node": "catalog:types",
+    "eslint-plugin-storybook": "catalog:lint",
     "eslint": "catalog:lint",
     "eslint-plugin-react": "catalog:lint",
     "eslint-plugin-react-hooks": "catalog:lint",
