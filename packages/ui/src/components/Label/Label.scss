@@ -3,5 +3,9 @@
     font-size: 1em;
     font-weight: 500;
     color: themed('gray-12');
+
+    &[for] {
+      cursor: pointer;
+    }
   }
 }

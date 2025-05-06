@@ -4,7 +4,6 @@
     overflow: hidden;
     min-width: 220px;
     border-radius: themed('size-4');
-    padding: themed('size-6');
     background-color: themed('gray-2');
   }
 
@@ -14,12 +13,17 @@
   &__sub-trigger {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     user-select: none;
 
     height: themed('size-24');
     color: themed('gray-12');
-    padding: 0 themed('size-8') 0 themed('size-24');
+    padding: themed('size-2') themed('size-8') themed('size-2') themed('size-24');
+
+    &:focus-visible {
+      outline: none;
+    }
 
     &[data-disabled] {
       color: themed('gray-6');
@@ -27,13 +31,13 @@
     }
 
     &[data-highlighted] {
-      background-color: themed('primary-2');
-      color: themed('primary-12');
+      background-color: themed('gray-3');
+      color: themed('gray-12');
     }
   }
 
   &__sub-trigger[data-state='open'] {
-    background-color: themed('gray-2');
+    background-color: themed('gray-4');
   }
 
   &__label {
@@ -58,5 +62,27 @@
 
   &__arrow {
     fill: themed('gray-2');
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

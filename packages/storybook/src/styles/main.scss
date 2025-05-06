@@ -27,7 +27,8 @@ html {
 }
 
 .docblock-code-toggle {
+  color: themed('gray-12') !important;
   border-top-left-radius: 3px !important;
-  border-color: themed('primary-9') !important;
-  background-color: themed('primary-9') !important;
+  border-color: themed('gray-4') !important;
+  background-color: themed('gray-4') !important;
 }
