@@ -23,20 +23,20 @@ export const Simple: Story = {
     return (
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <Button.Root>
+          <Button.Root secondary round>
             <HamburgerMenuIcon />
           </Button.Root>
         </DropdownMenu.Trigger>
 
-        <DropdownMenu.Content className="showcase__dropdown">
+        <DropdownMenu.Content>
           <DropdownMenu.Item>
-            New Tab <div className="showcase__dropdown__slot--right">⌘+T</div>
+            New Tab <div>⌘+T</div>
           </DropdownMenu.Item>
           <DropdownMenu.Item>
-            New Window <div className="showcase__dropdown__slot--right">⌘+N</div>
+            New Window <div>⌘+N</div>
           </DropdownMenu.Item>
           <DropdownMenu.Item disabled>
-            New Private Window <div className="showcase__dropdown__slot--right">⇧+⌘+N</div>
+            New Private Window <div>⇧+⌘+N</div>
           </DropdownMenu.Item>
           <DropdownMenu.Arrow />
         </DropdownMenu.Content>
@@ -50,21 +50,21 @@ export const SimpleWithPortal: Story = {
     return (
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <Button.Root>
+          <Button.Root secondary round>
             <HamburgerMenuIcon />
           </Button.Root>
         </DropdownMenu.Trigger>
 
         <DropdownMenu.Portal>
-          <DropdownMenu.Content className="showcase__dropdown">
+          <DropdownMenu.Content>
             <DropdownMenu.Item>
-              New Tab <div className="showcase__dropdown__slot--right">⌘+T</div>
+              New Tab <div>⌘+T</div>
             </DropdownMenu.Item>
             <DropdownMenu.Item>
-              New Window <div className="showcase__dropdown__slot--right">⌘+N</div>
+              New Window <div>⌘+N</div>
             </DropdownMenu.Item>
             <DropdownMenu.Item disabled>
-              New Private Window <div className="showcase__dropdown__slot--right">⇧+⌘+N</div>
+              New Private Window <div>⇧+⌘+N</div>
             </DropdownMenu.Item>
             <DropdownMenu.Arrow />
           </DropdownMenu.Content>
@@ -79,21 +79,21 @@ export const NoArrow: Story = {
     return (
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <Button.Root>
+          <Button.Root secondary round>
             <HamburgerMenuIcon />
           </Button.Root>
         </DropdownMenu.Trigger>
 
         <DropdownMenu.Portal>
-          <DropdownMenu.Content className="showcase__dropdown">
+          <DropdownMenu.Content>
             <DropdownMenu.Item>
-              New Tab <div className="showcase__dropdown__slot--right">⌘+T</div>
+              New Tab <div>⌘+T</div>
             </DropdownMenu.Item>
             <DropdownMenu.Item>
-              New Window <div className="showcase__dropdown__slot--right">⌘+N</div>
+              New Window <div>⌘+N</div>
             </DropdownMenu.Item>
             <DropdownMenu.Item disabled>
-              New Private Window <div className="showcase__dropdown__slot--right">⇧+⌘+N</div>
+              New Private Window <div>⇧+⌘+N</div>
             </DropdownMenu.Item>
           </DropdownMenu.Content>
         </DropdownMenu.Portal>
@@ -107,21 +107,21 @@ export const Submenu: Story = {
     return (
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <Button.Root>
+          <Button.Root secondary round>
             <HamburgerMenuIcon />
           </Button.Root>
         </DropdownMenu.Trigger>
 
         <DropdownMenu.Portal>
-          <DropdownMenu.Content className="showcase__dropdown">
+          <DropdownMenu.Content>
             <DropdownMenu.Item>
-              New Tab <div className="showcase__dropdown__slot--right">⌘+T</div>
+              New Tab <div>⌘+T</div>
             </DropdownMenu.Item>
             <DropdownMenu.Item>
-              New Window <div className="showcase__dropdown__slot--right">⌘+N</div>
+              New Window <div>⌘+N</div>
             </DropdownMenu.Item>
             <DropdownMenu.Item disabled>
-              New Private Window <div className="showcase__dropdown__slot--right">⇧+⌘+N</div>
+              New Private Window <div>⇧+⌘+N</div>
             </DropdownMenu.Item>
             <DropdownMenu.Sub>
               <DropdownMenu.SubTrigger>
@@ -133,7 +133,7 @@ export const Submenu: Story = {
               <DropdownMenu.Portal>
                 <DropdownMenu.SubContent>
                   <DropdownMenu.Item>
-                    Save Page As… <div className="showcase__dropdown__slot--right">⌘+S</div>
+                    Save Page As… <div>⌘+S</div>
                   </DropdownMenu.Item>
                   <DropdownMenu.Item>Create Shortcut…</DropdownMenu.Item>
                   <DropdownMenu.Item>Name Window…</DropdownMenu.Item>
@@ -141,7 +141,6 @@ export const Submenu: Story = {
                   <DropdownMenu.Item>Developer Tools</DropdownMenu.Item>
                 </DropdownMenu.SubContent>
               </DropdownMenu.Portal>
-              <DropdownMenu.Arrow />
             </DropdownMenu.Sub>
 
             <DropdownMenu.Arrow />
@@ -161,18 +160,18 @@ export const ItemGroups: Story = {
     return (
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
-          <Button.Root>
+          <Button.Root secondary round>
             <HamburgerMenuIcon />
           </Button.Root>
         </DropdownMenu.Trigger>
 
         <DropdownMenu.Portal>
-          <DropdownMenu.Content className="showcase__dropdown">
+          <DropdownMenu.Content>
             <DropdownMenu.CheckboxItem checked={bookmarksChecked} onCheckedChange={setBookmarksChecked}>
               <DropdownMenu.ItemIndicator>
                 <CheckIcon />
               </DropdownMenu.ItemIndicator>
-              Show Bookmarks <div className="showcase__dropdown__slot--right">⌘+B</div>
+              Show Bookmarks <div>⌘+B</div>
             </DropdownMenu.CheckboxItem>
             <DropdownMenu.CheckboxItem checked={urlsChecked} onCheckedChange={setUrlsChecked}>
               <DropdownMenu.ItemIndicator>

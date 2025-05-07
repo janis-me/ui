@@ -1,13 +1,15 @@
 .themed-ui__button {
   &__root {
     border: none;
-    padding: themed('size-8') themed('size-16');
+    padding: 0 themed('size-16');
     border-radius: 3px;
     cursor: pointer;
     transition: all 100ms ease-in-out;
+    height: themed('size-32');
+    font-size: 1em;
   }
 
-  &__primary {
+  &--primary {
     background-color: themed('primary-9');
     color: themed('gray-12');
 
@@ -16,7 +18,7 @@
     }
   }
 
-  &__secondary {
+  &--secondary {
     background-color: themed('gray-3');
     color: themed('gray-12');
 
@@ -25,7 +27,7 @@
     }
   }
 
-  &__error {
+  &--error {
     background-color: themed('error-9');
     color: themed('gray-12');
 
@@ -34,11 +36,34 @@
     }
   }
 
-  &__small {
-    padding: themed('size-4') themed('size-8');
+  &--round {
+    border-radius: 50%;
+    padding: themed('size-8');
+    aspect-ratio: 1 / 1;
+
+    &.themed-ui__button--small {
+      height: themed('size-24');
+      padding: 0;
+    }
+
+    &.themed-ui__button--large {
+      height: themed('size-40');
+      padding: 0;
+    }
   }
 
-  &__large {
-    padding: themed('size-12') themed('size-24');
+  &--small {
+    height: themed('size-24');
+    padding: 0 themed('size-8');
+
+    svg {
+      width: themed('size-12');
+      height: themed('size-12');
+    }
+  }
+
+  &--large {
+    height: themed('size-40');
+    padding: 0 themed('size-24');
   }
 }

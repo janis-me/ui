@@ -1,3 +1,4 @@
+import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { fn } from 'storybook/test';
 
@@ -23,6 +24,10 @@ const meta = {
     error: {
       control: { type: 'boolean' },
       description: 'Error button',
+    },
+    round: {
+      control: { type: 'boolean' },
+      description: 'Round button',
     },
     small: {
       control: { type: 'boolean' },
@@ -52,6 +57,29 @@ export const Secondary: Story = {
 export const Error: Story = {
   args: {
     error: true,
+  },
+};
+export const Round: Story = {
+  args: {
+    round: true,
+    secondary: true,
+    children: <HamburgerMenuIcon />,
+  },
+};
+export const RoundSmall: Story = {
+  args: {
+    round: true,
+    small: true,
+    secondary: true,
+    children: <HamburgerMenuIcon />,
+  },
+};
+export const RoundLarge: Story = {
+  args: {
+    round: true,
+    large: true,
+    secondary: true,
+    children: <HamburgerMenuIcon />,
   },
 };
 export const Small: Story = {

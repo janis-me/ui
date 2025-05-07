@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import { NavigationMenu } from 'radix-ui';
 import React from 'react';
 
+import './NavigationMenu.scss';
+
 export type NavigationMenuProps = NavigationMenu.NavigationMenuProps;
 export type ListProps = NavigationMenu.NavigationMenuListProps;
 export type ItemProps = NavigationMenu.NavigationMenuItemProps;

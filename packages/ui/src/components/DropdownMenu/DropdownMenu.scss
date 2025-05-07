@@ -5,6 +5,12 @@
     min-width: 220px;
     border-radius: themed('size-4');
     background-color: themed('gray-2');
+
+    z-index: 1;
+  }
+
+  &__content:not(:has(&__arrow)) {
+    margin-top: themed('size-6');
   }
 
   &__item,
@@ -36,8 +42,10 @@
     }
   }
 
-  &__sub-trigger[data-state='open'] {
-    background-color: themed('gray-4');
+  &__sub-trigger {
+    &[data-state='open'] {
+      background-color: themed('gray-4');
+    }
   }
 
   &__label {
@@ -62,27 +70,5 @@
 
   &__arrow {
     fill: themed('gray-2');
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

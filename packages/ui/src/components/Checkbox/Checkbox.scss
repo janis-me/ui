@@ -9,6 +9,10 @@
     justify-content: center;
     border: 1px solid themed('gray-6');
     cursor: pointer;
+
+    &:hover {
+      border: 1px solid themed('gray-7');
+    }
   }
 
   &__indicator {

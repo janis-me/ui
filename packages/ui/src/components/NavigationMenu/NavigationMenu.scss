@@ -7,32 +7,46 @@
     z-index: 1;
   }
 
+  &__item {
+    height: themed('size-32');
+  }
+
   &__list {
     display: flex;
     justify-content: center;
+    gap: themed('size-2');
     background-color: themed('gray-2');
     padding: 4px;
     border-radius: 6px;
     list-style: none;
     margin: 0;
+
+    &[data-orientation='horizontal'] {
+      flex-direction: row;
+    }
+    &[data-orientation='vertical'] {
+      flex-direction: column;
+    }
   }
 
   &__trigger,
   &__link {
-    padding: 8px 12px;
+    height: themed('size-32');
+    padding: themed('size-8') themed('size-12');
     outline: none;
     user-select: none;
-    font-weight: 500;
     line-height: 1;
-    border-radius: 4px;
-    font-size: 15px;
+    border-radius: themed('size-4');
+    background-color: themed('gray-3');
+    border: none;
     color: themed('gray-12');
+    font-size: 1em;
 
     &:focus {
       box-shadow: 0 0 0 2px themed('gray-1');
     }
     &:hover {
-      background-color: themed('primary-12');
+      background-color: themed('gray-4');
     }
   }
 
@@ -44,45 +58,75 @@
   }
 
   &__link {
-    display: block;
     text-decoration: none;
-    font-size: 15px;
-    line-height: 1;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
   }
 
   &__content {
+    background-color: themed('gray-3');
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    color: themed('gray-12');
+    border-radius: themed('size-4');
     animation-duration: 250ms;
     animation-timing-function: ease;
 
-    &[data-motion='from-start'] {
-      animation-name: enterFromLeft;
+    &[data-orientation='horizontal'] {
+      left: 0;
+      top: calc(themed('size-32') + themed('size-12'));
+
+      &[data-motion='from-start'] {
+        animation-name: enterFromLeft;
+      }
+      &[data-motion='from-end'] {
+        animation-name: enterFromRight;
+      }
+      &[data-motion='to-start'] {
+        animation-name: exitToLeft;
+      }
+      &[data-motion='to-end'] {
+        animation-name: exitToRight;
+      }
     }
-    &[data-motion='from-end'] {
-      animation-name: enterFromRight;
-    }
-    &[data-motion='to-start'] {
-      animation-name: exitToLeft;
-    }
-    &[data-motion='to-end'] {
-      animation-name: exitToRight;
+    &[data-orientation='vertical'] {
+      left: calc(100% + themed('size-4'));
+      top: 0;
+
+      &[data-motion='from-start'] {
+        animation-name: enterFromTop;
+      }
+      &[data-motion='from-end'] {
+        animation-name: enterFromBottom;
+      }
+      &[data-motion='to-start'] {
+        animation-name: exitToTop;
+      }
+      &[data-motion='to-end'] {
+        animation-name: exitToBottom;
+      }
     }
   }
 
   &__indicator {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    height: 10px;
-    top: 100%;
     overflow: hidden;
     z-index: 1;
+    color: themed('gray-3');
     transition:
       width,
-      transform 250ms ease;
+      transform 200ms ease;
+
+    &[data-orientation='horizontal'] {
+      left: 0;
+      top: calc(100% - themed('size-4'));
+    }
+
+    &[data-orientation='vertical'] {
+      left: calc(100% - themed('size-4'));
+    }
 
     &[data-state='visible'] {
       animation: fadeIn 200ms ease;
@@ -168,6 +212,49 @@
   to {
     opacity: 0;
     transform: translateX(-200px);
+  }
+}
+
+@keyframes enterFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes enterFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes exitToBottom {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
+@keyframes exitToTop {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
   }
 }
 

@@ -30,6 +30,7 @@
     "@vitest/browser": "catalog:test",
     "@vitest/coverage-v8": "catalog:test",
     "globals": "^16.0.0",
+    "sanitize.css": "^13.0.0",
     "sass": "catalog:build",
     "storybook": "9.0.0-beta.10",
     "typescript": "catalog:build",

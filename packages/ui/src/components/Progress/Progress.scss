@@ -1,19 +1,45 @@
 .themed-ui__progress {
   &__root {
+    position: relative;
+    overflow: hidden;
     background-color: transparent;
     width: 100%;
     height: themed('size-24');
     border-radius: themed('size-4');
+    background: themed('gray-3');
 
     /* Fix overflow clipping in Safari */
     /* https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0 */
     transform: translateZ(0);
   }
 
-  &__indicator {
+  &--primary &__indicator {
     background-color: themed('primary-9');
+  }
+
+  &--secondary &__indicator {
+    background-color: themed('gray-9');
+  }
+
+  &--info &__indicator {
+    background-color: themed('info-9');
+  }
+
+  &--success &__indicator {
+    background-color: themed('success-9');
+  }
+
+  &--warning &__indicator {
+    background-color: themed('warning-9');
+  }
+
+  &--error &__indicator {
+    background-color: themed('error-9');
+  }
+
+  &__indicator {
     width: 100%;
     height: 100%;
-    transition: transform 100ms ease-in-out;
+    transition: transform 200ms ease-in-out;
   }
 }

@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { deleteThemeFromLocalstorage, setDefaultTheme, setTheme, ThemeProvider } from '@janis.me/react-themed/js';
 
 import '../src/styles/main.scss';
+import 'sanitize.css';
 
 const preview: Preview = {
   globalTypes: {
