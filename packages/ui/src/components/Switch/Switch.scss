@@ -1,0 +1,33 @@
+.themed-ui__switch {
+  $switch-width: calc(themed('size-48') - themed('size-6'));
+
+  $thumb-size: themed('size-16');
+  $thumb-offset: calc($thumb-size);
+
+  &__root {
+    width: $switch-width;
+    height: themed('size-24');
+    background-color: themed('gray-3');
+    border-radius: 9999px;
+    position: relative;
+    border: 1px solid themed('gray-6');
+
+    &[data-state='checked'] {
+      background-color: themed('primary-9');
+    }
+  }
+
+  &__thumb {
+    display: block;
+    width: $thumb-size;
+    height: $thumb-size;
+    aspect-ratio: 1 / 1;
+    background-color: themed('gray-12');
+    border-radius: 9999px;
+    transition: transform 100ms;
+
+    &[data-state='checked'] {
+      transform: translateX($thumb-offset);
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-packagejson"],
   "singleQuote": true,
   "trailingComma": "all",
-  "printWidth": 120,
+  "printWidth": 160,
   "endOfLine": "lf",
   "arrowParens": "avoid",
   "importOrder": [

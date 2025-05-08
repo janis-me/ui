@@ -1,0 +1,35 @@
+@use 'global.scss' as *;
+
+@include apply();
+
+html {
+  font-size: 16px;
+  background-color: themed('gray-1');
+}
+
+.sbdocs,
+.sbdocs-wrapper {
+  background-color: themed('gray-1') !important;
+
+  h1,
+  h2,
+  h3 {
+    color: themed('gray-12') !important;
+  }
+}
+
+.sb-bar {
+  background-color: themed('gray-1') !important;
+  box-shadow: themed('gray-4') 0px -1px 0px 0px inset !important;
+}
+
+.sb-anchor > div {
+  border: 1px solid themed('gray-4') !important;
+}
+
+.docblock-code-toggle {
+  color: themed('gray-12') !important;
+  border-top-left-radius: 3px !important;
+  border-color: themed('gray-4') !important;
+  background-color: themed('gray-4') !important;
+}

@@ -1,0 +1,64 @@
+.themed-ui__context-menu {
+  &__content,
+  &__sub-content {
+    overflow: hidden;
+    min-width: 220px;
+    border-radius: themed('size-4');
+    background-color: themed('gray-2');
+
+    z-index: 1;
+  }
+
+  &__item,
+  &__checkbox-item,
+  &__radio-item,
+  &__sub-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    user-select: none;
+
+    height: themed('size-32');
+    color: themed('gray-12');
+    padding: 0 themed('size-8') 0 themed('size-24');
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &[data-disabled] {
+      color: themed('gray-6');
+      pointer-events: 'none';
+    }
+
+    &[data-highlighted] {
+      background-color: themed('gray-3');
+      color: themed('gray-12');
+    }
+  }
+
+  &__sub-trigger[data-state='open'] {
+    background-color: themed('gray-4');
+  }
+
+  &__label {
+    color: themed('gray-9');
+    padding: 0 themed('size-6') 0 themed('size-24');
+  }
+
+  &__separator {
+    height: themed('size-1');
+    background-color: themed('gray-3');
+    margin: 5px;
+  }
+
+  &__item-indicator {
+    position: absolute;
+    left: 0;
+    width: themed('size-24');
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

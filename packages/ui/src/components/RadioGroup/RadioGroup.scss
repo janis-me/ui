@@ -1,0 +1,40 @@
+.themed-ui__radio-group {
+  &__root {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    background-color: transparent;
+    width: themed('size-16');
+    height: themed('size-16');
+    border-radius: 100%;
+    border: 1px solid themed('gray-6');
+
+    &:hover {
+      border: 1px solid themed('gray-7');
+    }
+  }
+
+  &__indicator {
+    color: themed('gray-12');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+
+    &::after {
+      content: '';
+      display: block;
+      width: themed('size-8');
+      height: themed('size-8');
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: themed('gray-12');
+    }
+  }
+}
