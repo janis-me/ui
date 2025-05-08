@@ -7,5 +7,7 @@ import * as NavigationMenu from './components/NavigationMenu/NavigationMenu';
 import * as Progress from './components/Progress/Progress';
 import * as RadioGroup from './components/RadioGroup/RadioGroup';
 import * as Select from './components/Select/Select';
+import * as Slider from './components/Slider/Slider';
+import * as Switch from './components/Switch/Switch';
 
-export { Button, Checkbox, ContextMenu, DropdownMenu, Label, NavigationMenu, Progress, RadioGroup, Select };
+export { Button, Checkbox, ContextMenu, DropdownMenu, Label, NavigationMenu, Progress, RadioGroup, Select, Slider, Switch };

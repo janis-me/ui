@@ -19,9 +19,9 @@
     position: relative;
     user-select: none;
 
-    height: themed('size-24');
+    height: themed('size-32');
     color: themed('gray-12');
-    padding: themed('size-2') themed('size-8') themed('size-2') themed('size-24');
+    padding: 0 themed('size-8') 0 themed('size-24');
 
     &:focus-visible {
       outline: none;

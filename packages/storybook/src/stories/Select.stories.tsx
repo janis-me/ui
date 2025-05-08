@@ -11,6 +11,13 @@ const meta: Meta<typeof Select.Root> = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  decorators: [
+    Story => (
+      <div style={{ width: '200px' }}>
+        <Story />
+      </div>
+    ),
+  ],
   args: {},
 };
 
@@ -28,7 +35,7 @@ export const Simple: Story = {
           </Select.Icon>
         </Select.Trigger>
 
-        <Select.Content>
+        <Select.Content position="popper">
           <Select.Item value="apple">
             <Select.ItemText>Apple</Select.ItemText>
             <Select.ItemIndicator>
@@ -42,6 +49,121 @@ export const Simple: Story = {
             </Select.ItemIndicator>
           </Select.Item>
         </Select.Content>
+      </Select.Root>
+    );
+  },
+};
+
+export const WithPortal: Story = {
+  render: function Render(args) {
+    return (
+      <Select.Root {...args}>
+        <Select.Trigger>
+          <Select.Value placeholder="Select a fruit…" />
+          <Select.Icon>
+            <ChevronDownIcon />
+          </Select.Icon>
+        </Select.Trigger>
+
+        <Select.Portal>
+          <Select.Content position="popper">
+            <Select.Item value="apple">
+              <Select.ItemText>Apple</Select.ItemText>
+              <Select.ItemIndicator>
+                <CheckIcon />
+              </Select.ItemIndicator>
+            </Select.Item>
+            <Select.Item value="banana">
+              <Select.ItemText>Banana</Select.ItemText>
+              <Select.ItemIndicator>
+                <CheckIcon />
+              </Select.ItemIndicator>
+            </Select.Item>
+          </Select.Content>
+        </Select.Portal>
+      </Select.Root>
+    );
+  },
+};
+
+export const ExplicitPositioning: Story = {
+  render: function Render(args) {
+    return (
+      <Select.Root {...args}>
+        <Select.Trigger>
+          <Select.Value placeholder="Select a fruit…" />
+          <Select.Icon>
+            <ChevronDownIcon />
+          </Select.Icon>
+        </Select.Trigger>
+
+        <Select.Portal>
+          <Select.Content position="popper" side="right">
+            <Select.Item value="apple">
+              <Select.ItemText>Apple</Select.ItemText>
+              <Select.ItemIndicator>
+                <CheckIcon />
+              </Select.ItemIndicator>
+            </Select.Item>
+            <Select.Item value="banana">
+              <Select.ItemText>Banana</Select.ItemText>
+              <Select.ItemIndicator>
+                <CheckIcon />
+              </Select.ItemIndicator>
+            </Select.Item>
+          </Select.Content>
+        </Select.Portal>
+      </Select.Root>
+    );
+  },
+};
+
+export const WithGroups: Story = {
+  render: function Render(args) {
+    return (
+      <Select.Root {...args}>
+        <Select.Trigger>
+          <Select.Value placeholder="Select a fruit…" />
+          <Select.Icon>
+            <ChevronDownIcon />
+          </Select.Icon>
+        </Select.Trigger>
+
+        <Select.Portal>
+          <Select.Content position="popper" side="right">
+            <Select.Group>
+              <Select.Label>Fruit</Select.Label>
+              <Select.Item value="apple">
+                <Select.ItemText>Apple</Select.ItemText>
+                <Select.ItemIndicator>
+                  <CheckIcon />
+                </Select.ItemIndicator>
+              </Select.Item>
+              <Select.Item value="banana">
+                <Select.ItemText>Banana</Select.ItemText>
+                <Select.ItemIndicator>
+                  <CheckIcon />
+                </Select.ItemIndicator>
+              </Select.Item>
+            </Select.Group>
+            <Select.Separator />
+            <Select.Group>
+              <Select.Label>Candy</Select.Label>
+              <Select.Item value="chocolate">
+                <Select.ItemText>Chocolate</Select.ItemText>
+                <Select.ItemIndicator>
+                  <CheckIcon />
+                </Select.ItemIndicator>
+              </Select.Item>
+              <Select.Item value="gummy">
+                <Select.ItemText>Gummy</Select.ItemText>
+                <Select.ItemIndicator>
+                  <CheckIcon />
+                </Select.ItemIndicator>
+              </Select.Item>
+            </Select.Group>
+          </Select.Content>
+        </Select.Portal>
       </Select.Root>
     );
   },
