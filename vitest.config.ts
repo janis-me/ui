@@ -11,35 +11,12 @@ export default defineConfig({
     pool: 'threads',
     workspace: [
       {
-        test: {
-          name: 'unit',
-          include: ['./packages/**/test/*.unit.test.{ts,tsx}'],
-          css: true,
-        },
-      },
-      {
-        test: {
-          name: 'browser',
-          include: ['./packages/**/*.browser.test.{ts,tsx}'],
-          browser: {
-            enabled: true,
-            headless: true,
-            provider: 'playwright',
-            instances: [
-              {
-                browser: 'chromium',
-              },
-            ],
-          },
-        },
-      },
-      {
         extends: true,
         plugins: [
           // The plugin will run tests for the stories defined in your Storybook config
           // See options at: https://storybook.js.org/docs/writing-tests/test-addon#storybooktest
           storybookTest({
-            configDir: path.join(dirname, '.storybook'),
+            configDir: path.join(dirname, './packages/storybook/.storybook'),
           }),
         ],
         test: {

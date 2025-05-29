@@ -1,7 +1,7 @@
 {
   "name": "@janis.me/ui",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "private": false,
   "type": "module",
   "exports": {
     ".": {
@@ -10,12 +10,14 @@
     }
   },
   "main": "src/index.js",
+  "files": [
+    "./src/**/*",
+    "README.md"
+  ],
   "scripts": {
-    "build": "vite build",
-    "build:watch": "vite build --watch",
-    "dev": "vite",
     "format": "prettier . --write",
-    "preview": "vite preview"
+    "prepack": "pnpm -c exec ../scripts/prepack.sh",
+    "prepublishOnly": "pnpm install"
   },
   "dependencies": {
     "clsx": "^2.1.1",
