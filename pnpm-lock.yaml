@@ -173,8 +173,8 @@ importers:
   packages/storybook:
     dependencies:
       '@janis.me/react-themed':
-        specifier: 0.1.7
-        version: 0.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 0.2.0
+        version: 0.2.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@janis.me/ui':
         specifier: workspace:^
         version: link:../ui
@@ -631,15 +631,15 @@ packages:
     resolution: {integrity: sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==}
     engines: {node: '>=8'}
 
-  '@janis.me/react-themed@0.1.7':
-    resolution: {integrity: sha512-BT4Nxth9vmgu/7ei5IyH+9pfZ9tgvpqo5X5Xjxub/ncKniqsKOjI0jzc1ahjRO2yrPsicNEtgoA+kKocPNGBDg==}
+  '@janis.me/react-themed@0.2.0':
+    resolution: {integrity: sha512-eN5beNdPzDfy7o95RqWZL7tePfB7K8wAAeMcyZT5m/egF4j8xlbK5pgvemmIJJMCO+IZEM56tnusBgyOvwMKEg==}
     engines: {node: '>=22.11.0'}
     peerDependencies:
       react: ^19.1.0
       react-dom: ^19.1.0
 
-  '@janis.me/themed@0.1.7':
-    resolution: {integrity: sha512-jcXY8ss89q0oaSM7U77a2aGIlZr6KDjShyB4r0qpetZ74ymOaqm1RPHh6O3WdySn3xbg/Mg5IFwUocWDfiTwEA==}
+  '@janis.me/themed@0.2.0':
+    resolution: {integrity: sha512-vtpZs7BAkvQWlwtZA2n7wfRdhV5KdM7jFxPucfKiG7Pdh8XGk+MSFJNanqqKZX33VXEsFrf3rFXtJ3uTt+0J9A==}
     engines: {node: '>=22.11.0'}
 
   '@joshwooding/vite-plugin-react-docgen-typescript@0.6.0':
@@ -3833,13 +3833,13 @@ snapshots:
 
   '@istanbuljs/schema@0.1.3': {}
 
-  '@janis.me/react-themed@0.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@janis.me/react-themed@0.2.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@janis.me/themed': 0.1.7
+      '@janis.me/themed': 0.2.0
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@janis.me/themed@0.1.7': {}
+  '@janis.me/themed@0.2.0': {}
 
   '@joshwooding/vite-plugin-react-docgen-typescript@0.6.0(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.24)(jiti@2.4.2)(sass@1.89.0)(yaml@2.7.1))':
     dependencies:
