@@ -88,10 +88,6 @@ catalogs:
       specifier: ^22.15.24
       version: 22.15.24
 
-overrides:
-  '@janis.me/react-themed': file:../themed/packages/react-themed
-  '@janis.me/themed': file:../themed/packages/themed
-
 importers:
 
   .:
@@ -172,11 +168,13 @@ importers:
         specifier: catalog:lint
         version: 8.33.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
 
+  packages/scripts: {}
+
   packages/storybook:
     dependencies:
       '@janis.me/react-themed':
-        specifier: file:../../../themed/packages/react-themed
-        version: file:../themed/packages/react-themed(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 0.1.7
+        version: 0.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@janis.me/ui':
         specifier: workspace:^
         version: link:../ui
@@ -633,15 +631,15 @@ packages:
     resolution: {integrity: sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==}
     engines: {node: '>=8'}
 
-  '@janis.me/react-themed@file:../themed/packages/react-themed':
-    resolution: {directory: ../themed/packages/react-themed, type: directory}
+  '@janis.me/react-themed@0.1.7':
+    resolution: {integrity: sha512-BT4Nxth9vmgu/7ei5IyH+9pfZ9tgvpqo5X5Xjxub/ncKniqsKOjI0jzc1ahjRO2yrPsicNEtgoA+kKocPNGBDg==}
     engines: {node: '>=22.11.0'}
     peerDependencies:
-      react: catalog:react
-      react-dom: catalog:react
+      react: ^19.1.0
+      react-dom: ^19.1.0
 
-  '@janis.me/themed@file:../themed/packages/themed':
-    resolution: {directory: ../themed/packages/themed, type: directory}
+  '@janis.me/themed@0.1.7':
+    resolution: {integrity: sha512-jcXY8ss89q0oaSM7U77a2aGIlZr6KDjShyB4r0qpetZ74ymOaqm1RPHh6O3WdySn3xbg/Mg5IFwUocWDfiTwEA==}
     engines: {node: '>=22.11.0'}
 
   '@joshwooding/vite-plugin-react-docgen-typescript@0.6.0':
@@ -3835,13 +3833,13 @@ snapshots:
 
   '@istanbuljs/schema@0.1.3': {}
 
-  '@janis.me/react-themed@file:../themed/packages/react-themed(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@janis.me/react-themed@0.1.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@janis.me/themed': file:../themed/packages/themed
+      '@janis.me/themed': 0.1.7
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
 
-  '@janis.me/themed@file:../themed/packages/themed': {}
+  '@janis.me/themed@0.1.7': {}
 
   '@joshwooding/vite-plugin-react-docgen-typescript@0.6.0(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.24)(jiti@2.4.2)(sass@1.89.0)(yaml@2.7.1))':
     dependencies:
