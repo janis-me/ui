@@ -5,7 +5,6 @@
     // Sizes
     dropdown-menu__width: calc(map.get($base, 'size-6') + map.get($base, 'size-4')),
     dropdown-menu__height: calc(map.get($base, 'size-5') + map.get($base, 'size-4')),
-    dropdown-menu__padding: map.get($base, 'size-3'),
     // Colors
     dropdown-menu__background: map.get($base, 'color-surface'),
     dropdown-menu__background-hover: map.get($base, 'color-elevated'),
@@ -19,9 +18,8 @@
     dropdown-menu__border-style: map.get($base, 'border-style'),
     dropdown-menu__border-color: map.get($base, 'color-border'),
     // items
-    dropdown-menu__item-height: calc(map.get($base, 'size-5') + map.get($base, 'size-4')),
-    dropdown-menu__item-padding-v: map.get($base, 'size-3'),
-    dropdown-menu__item-padding-h: map.get($base, 'size-4'),
+    dropdown-menu__item-height: map.get($base, 'size-6'),
+    dropdown-menu__item-padding-h: calc(map.get($base, 'size-6') - map.get($base, 'size-4')),
     dropdown-menu__item-color: map.get($base, 'color-text-primary'),
     dropdown-menu__item-color-hover: map.get($base, 'color-text-secondary'),
     dropdown-menu__item-color-disabled: map.get($base, 'color-text-placeholder'),

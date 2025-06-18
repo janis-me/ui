@@ -20,11 +20,10 @@ html {
 
 .sb-bar {
   background-color: themed('color-background') !important;
-  box-shadow: themed('color-text-placeholder') 0px -1px 0px 0px inset !important;
 }
 
 .sb-anchor > div {
-  border: 1px solid themed('color-border') !important;
+  border: 1px solid themed('color-border-light') !important;
 }
 
 .docblock-code-toggle {

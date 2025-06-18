@@ -5,8 +5,9 @@
 @use '../variables/components/checkbox';
 @use '../variables/components/context-menu';
 @use '../variables/components/dropdown-menu';
+@use '../variables/components/switch';
 
-$components: ('button', 'checkbox', 'context-menu', 'dropdown-menu');
+$components: ('button', 'checkbox', 'context-menu', 'dropdown-menu', 'switch');
 
 @function generate-theme($key, $values) {
   // TODO: Validate input

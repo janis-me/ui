@@ -8,7 +8,9 @@
     cursor: pointer;
     transition: all 100ms ease-in-out;
     height: themed('button__height');
-    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &--primary {

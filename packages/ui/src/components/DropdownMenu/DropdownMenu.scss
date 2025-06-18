@@ -4,6 +4,10 @@
     overflow: hidden;
     min-width: 220px;
     background-color: themed('dropdown-menu__background');
+    border-radius: themed('dropdown-menu__border-radius');
+    border-style: themed('dropdown-menu__border-style');
+    border-color: themed('dropdown-menu__border-color');
+    border-width: themed('dropdown-menu__border-width');
 
     z-index: 1;
   }
@@ -22,10 +26,10 @@
     position: relative;
     user-select: none;
 
-    height: themed('dropdown-menu__height');
-    color: themed('dropdown-menu__color');
-    padding: themed('dropdown-menu__padding');
+    height: themed('dropdown-menu__item-height');
+    color: themed('dropdown-menu__item-color');
     background-color: themed('dropdown-menu__item-background');
+    padding: 0 themed('dropdown-menu__item-padding-h');
 
     &:focus-visible {
       outline: none;

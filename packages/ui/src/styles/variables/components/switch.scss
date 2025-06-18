@@ -1,0 +1,24 @@
+@use 'sass:map';
+
+@function make-vars($base) {
+  $switch-width: calc((map.get($base, 'size-6') + map.get($base, 'size-4')) + map.get($base, 'size-2'));
+  $switch-height: calc(map.get($base, 'size-5') + map.get($base, 'size-4'));
+
+  $thumb-size: calc(map.get($base, 'size-5') + map.get($base, 'size-3'));
+  $thumb-offset: map.get($base, 'size-5');
+
+  @return (
+    switch__width: $switch-width,
+    switch__thumb-size: $thumb-size,
+    switch__thumb-offset: $thumb-offset,
+    switch__height: $switch-height,
+    switch__background-color: map.get($base, 'color-background'),
+    switch__background-color-active: map.get($base, 'color-interactive'),
+    switch__border-color: map.get($base, 'color-border-light'),
+    switch__border-color-active: map.get($base, 'color-interactive'),
+    switch__border-width: map.get($base, 'border-width'),
+    switch__border-radius: 9999px,
+    switch__border-style: solid,
+    switch__thumb-background-color: map.get($base, 'color-text-interactive')
+  );
+}

@@ -54,7 +54,7 @@ $_themes: ();
 
 @mixin configure($args...) {
   @if (list.length(map.keys($_themes)) == 0) {
-    @include themes(themes.$default-light, themes.$default-dark);
+    @include themes(themes.default-light(), themes.default-dark());
   }
   @include themed.configure($_themes, $args...);
 }

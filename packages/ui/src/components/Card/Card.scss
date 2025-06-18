@@ -1,0 +1,10 @@
+@use '@janis.me/themed' as *;
+
+.themed-ui__card {
+  &__root {
+    border: 1px solid themed('color-border-light');
+    border-radius: themed('border-radius');
+    background-color: themed('color-surface');
+    padding: themed('size-5');
+  }
+}

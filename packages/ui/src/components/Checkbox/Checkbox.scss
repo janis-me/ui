@@ -13,6 +13,10 @@
     &:hover {
       border: themed('checkbox__border-width') themed('checkbox__border-style') themed('checkbox__border-color-hover');
     }
+
+    &[data-state='checked'] {
+      border: themed('checkbox__border-width') themed('checkbox__border-style') themed('checkbox__color-active');
+    }
   }
 
   &__indicator {

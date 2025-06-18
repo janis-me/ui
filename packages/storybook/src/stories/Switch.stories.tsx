@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Label, Switch } from '@janis.me/ui';
+import { Card, Label, Switch } from '@janis.me/ui';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: Meta<typeof Switch.Root> = {
@@ -12,9 +12,9 @@ const meta: Meta<typeof Switch.Root> = {
   tags: ['autodocs'],
   decorators: [
     Story => (
-      <div style={{ width: '200px' }}>
+      <Card.Root style={{ width: '200px' }}>
         <Story />
-      </div>
+      </Card.Root>
     ),
   ],
   args: {},

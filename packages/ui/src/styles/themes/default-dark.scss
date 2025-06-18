@@ -2,75 +2,64 @@
 
 @use './generate';
 @use '../colors';
+@use '../utils';
+@use '../variables/base';
 
-$_colors: colors.generate-themed-colors(#0284c7);
-$_dark: map.get($_colors, 'dark');
+@function default-dark($primary: #0284c7, $gray: null, $info: null, $success: null, $warning: null, $error: null) {
+  $_colors: colors.generate-themed-colors($primary, $gray, $info, $success, $warning, $error);
+  $_dark: map.get($_colors, 'dark');
 
-$_vars: map.merge(
-  $_dark,
-  (
-    // Colors
-    // ----------------
-    color-text-primary: map.get($_dark, 'gray-12'),
-    color-text-secondary: map.get($_dark, 'gray-11'),
-    color-text-tertiary: map.get($_dark, 'gray-10'),
-    color-text-placeholder: map.get($_dark, 'gray-9'),
-    // interactive text
-    color-text-interactive: map.get($_dark, 'gray-12'),
-    // links
-    color-text-link: map.get($_dark, 'primary-11'),
-    color-text-link-hover: map.get($_dark, 'primary-10'),
-    color-text-link-active: map.get($_dark, 'primary-9'),
-    color-text-link-visited: map.get($_dark, 'primary-8'),
-    // Backgrounds
-    color-background: map.get($_dark, 'gray-1'),
-    color-surface: map.get($_dark, 'gray-2'),
-    color-elevated: map.get($_dark, 'gray-3'),
-    // Borders
-    color-border: map.get($_dark, 'gray-8'),
-    color-border-light: map.get($_dark, 'gray-7'),
-    // Interactive backgrounds
-    color-interactive: map.get($_dark, 'primary-9'),
-    color-interactive-hover: map.get($_dark, 'primary-8'),
-    color-interactive-active: map.get($_dark, 'primary-7'),
-    color-interactive-disabled: map.get($_dark, 'primary-6'),
-    // Error
-    color-error: map.get($_dark, 'error-6'),
-    color-error-hover: map.get($_dark, 'error-5'),
-    color-error-active: map.get($_dark, 'error-4'),
-    color-error-disabled: map.get($_dark, 'error-3'),
-    // Success
-    color-success: map.get($_dark, 'success-6'),
-    color-success-hover: map.get($_dark, 'success-5'),
-    color-success-active: map.get($_dark, 'success-4'),
-    color-success-disabled: map.get($_dark, 'success-3'),
-    // Warning
-    color-warning: map.get($_dark, 'warning-6'),
-    color-warning-hover: map.get($_dark, 'warning-5'),
-    color-warning-active: map.get($_dark, 'warning-4'),
-    color-warning-disabled: map.get($_dark, 'warning-3'),
-    // Info
-    color-info: map.get($_dark, 'info-6'),
-    color-info-hover: map.get($_dark, 'info-5'),
-    color-info-active: map.get($_dark, 'info-4'),
-    color-info-disabled: map.get($_dark, 'info-3'),
-    // Borders
-    // ----------------
-    border-radius: 3px,
-    border-width: 1px,
-    border-style: solid,
-
-    // Sizes
-    // ----------------
-    size-1: 1px,
-    size-2: 2px,
-    size-3: 4px,
-    size-4: 8px,
-    size-5: 16px,
-    size-6: 32px,
-    size-7: 64px,
-    size-8: 128px
-  )
-);
-
-$default-dark: generate.generate-theme('dark', $_vars);
+  $_vars: utils.merge-multiple(
+    $_dark,
+    (
+      // Colors
+      // ----------------
+      color-text-primary: map.get($_dark, 'gray-12'),
+      color-text-secondary: map.get($_dark, 'gray-11'),
+      color-text-tertiary: map.get($_dark, 'gray-10'),
+      color-text-placeholder: map.get($_dark, 'gray-9'),
+      // interactive text
+      color-text-interactive: map.get($_dark, 'gray-12'),
+      // links
+      color-text-link: map.get($_dark, 'primary-11'),
+      color-text-link-hover: map.get($_dark, 'primary-10'),
+      color-text-link-active: map.get($_dark, 'primary-9'),
+      color-text-link-visited: map.get($_dark, 'primary-8'),
+      // Backgrounds
+      color-background: map.get($_dark, 'gray-1'),
+      color-surface: map.get($_dark, 'gray-2'),
+      color-elevated: map.get($_dark, 'gray-3'),
+      // Borders
+      color-border: map.get($_dark, 'gray-8'),
+      color-border-light: map.get($_dark, 'gray-7'),
+      // Interactive backgrounds
+      color-interactive: map.get($_dark, 'primary-9'),
+      color-interactive-hover: map.get($_dark, 'primary-8'),
+      color-interactive-active: map.get($_dark, 'primary-7'),
+      color-interactive-disabled: map.get($_dark, 'primary-6'),
+      // Error
+      color-error: map.get($_dark, 'error-9'),
+      color-error-hover: map.get($_dark, 'error-8'),
+      color-error-active: map.get($_dark, 'error-7'),
+      color-error-disabled: map.get($_dark, 'error-6'),
+      // Success
+      color-success: map.get($_dark, 'success-9'),
+      color-success-hover: map.get($_dark, 'success-8'),
+      color-success-active: map.get($_dark, 'success-7'),
+      color-success-disabled: map.get($_dark, 'success-6'),
+      // Warning
+      color-warning: map.get($_dark, 'warning-9'),
+      color-warning-hover: map.get($_dark, 'warning-8'),
+      color-warning-active: map.get($_dark, 'warning-7'),
+      color-warning-disabled: map.get($_dark, 'warning-6'),
+      // Info
+      color-info: map.get($_dark, 'info-9'),
+      color-info-hover: map.get($_dark, 'info-8'),
+      color-info-active: map.get($_dark, 'info-7'),
+      color-info-disabled: map.get($_dark, 'info-6')
+    ),
+    base.$borders,
+    base.$sizes
+  );
+  @return generate.generate-theme('dark', $_vars);
+}

@@ -11,7 +11,7 @@
     checkbox__border-color: map.get($base, 'color-border'),
     checkbox__border-color-hover: map.get($base, 'color-border-light'),
     // Colors
-    checkbox__background: map.get($base, 'color-text-interactive'),
+    checkbox__background: map.get($base, 'color-elevated'),
     checkbox__background-hover: map.get($base, 'color-surface'),
     checkbox__background-active: map.get($base, 'color-background'),
     checkbox__background-disabled: map.get($base, 'color-border-light'),

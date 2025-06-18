@@ -19,7 +19,7 @@
 
   &__range {
     position: absolute;
-    background-color: themed('color-text-primary');
+    background-color: themed('color-interactive');
     border-radius: 9999px;
     height: 100%;
   }
@@ -38,7 +38,7 @@
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 5px themed('color-elevated');
+      box-shadow: 0 0 0 2px themed('color-text-tertiary');
     }
   }
 }
