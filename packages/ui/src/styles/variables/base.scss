@@ -1,13 +1,16 @@
 @use 'sass:map';
 
-// TODO: Generate these colors with a `themed` generator, to be able to only pass a few base colors.
 $vars: (
   // Colors
   // ----------------
+  // TODO: Generate these colors with a `themed` generator, to be able to only pass a few base colors.
   color-text-primary: #18181b,
   color-text-secondary: #27272a,
   color-text-tertiary: #3f3f46,
   color-text-placeholder: #52525b,
+
+  color-text-contrast: #f4f4f5,
+
   color-text-link: #0ea5e9,
   color-text-link-hover: #0284c7,
   color-text-link-active: #0369a1,
@@ -20,9 +23,44 @@ $vars: (
   color-border: #d4d4d8,
   color-border-light: #e4e4e7,
 
+  color-interactive: #0ea5e9,
+  color-interactive-hover: #0284c7,
+  color-interactive-active: #0369a1,
+  color-interactive-disabled: #bfdbfe,
+
+  color-error: #dc2626,
+  color-error-hover: #b91c1c,
+  color-error-active: #991b1b,
+  color-error-disabled: #fca5a5,
+
+  color-success: #16a34a,
+  color-success-hover: #15803d,
+  color-success-active: #166534,
+  color-success-disabled: #bbf7d0,
+
+  color-warning: #f59e0b,
+  color-warning-hover: #d97706,
+  color-warning-active: #b45309,
+  color-warning-disabled: #fde68a,
+
   // Borders
   // ----------------
   border-radius: 3px,
   border-width: 1px,
-  border-style: solid
+  border-style: solid,
+
+  // Sizes
+  // ----------------
+  size-1: 1px,
+  size-2: 2px,
+  size-3: 4px,
+  size-4: 8px,
+  size-5: 16px,
+  size-6: 32px,
+  size-7: 64px,
+  size-8: 128px
 );
+
+@function get($key) {
+  @return map.get($vars, $key);
+}

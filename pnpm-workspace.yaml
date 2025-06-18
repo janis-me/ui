@@ -5,6 +5,9 @@ ignoredBuiltDependencies:
   - esbuild
 
 catalogs:
+  ui:
+    '@janis.me/themed': '^0.2.1'
+    'surimi': '^0.2.2'
   build:
     vite: ^6.3.5
     '@vitejs/plugin-react': ^4.5.0

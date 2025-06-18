@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "storybook build",
-    "dev": "storybook dev -p 6006"
+    "dev": "storybook dev -p 6006 --no-open"
   },
   "dependencies": {
     "@janis.me/react-themed": "0.2.0",

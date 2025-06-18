@@ -5,7 +5,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    exclude: ['@janis-me/react-themed'],
+    exclude: ['@janis-me/ui', '@janis.me/react-themed', '@janis.me/themed'],
   },
   css: {
     preprocessorOptions: {

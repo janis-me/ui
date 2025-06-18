@@ -1,18 +1,37 @@
+@forward '@janis.me/themed';
+
+@use 'sass:map';
+
 @use '@janis.me/themed';
 
-@use './variables/base' as base;
+@use './variables/base';
+@use './variables/button';
 
-$_final-variables: ();
+@use './utils';
 
-@mixin base($variables) {
+$_default-theme-map: utils.merge-multiple(base.$vars, button.$vars);
+
+$_themes: ();
+
+// For every theme, set it to the default theme map
+// That does not allow for proper theming just yet, but it's a start for testing.
+// TODO: Figure out a way to let users easily add dark/light themes.
+// Probably by using the built-in `themed` generators. But then I have to make these not-shit.
+@mixin themes($themes...) {
+  @each $theme in $themes {
+    $_themes: map.set($_themes, $theme, $_default-theme-map) !global;
+  }
+}
+
+@mixin override($themes...) {
   // TODO: Add validation
-  $merged: map.merge(base.$vars, $variables);
-
-  $_final-variables: map.merge($_final-variables, $merged) !global;
+  @each $key, $vals in $themes {
+    $_themes: map.set($_themes, $key, map.merge($_default-theme-map, $vals)) !global;
+  }
 }
 
 @mixin configure($args...) {
-  @include themed.configure($_final-variables, $args...);
+  @include themed.configure($_themes, $args...);
 }
 
 @mixin apply() {

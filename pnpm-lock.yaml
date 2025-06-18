@@ -87,6 +87,13 @@ catalogs:
     '@types/node':
       specifier: ^22.15.24
       version: 22.15.24
+  ui:
+    '@janis.me/themed':
+      specifier: ^0.2.1
+      version: 0.2.1
+    surimi:
+      specifier: ^0.2.2
+      version: 0.2.2
 
 importers:
 
@@ -282,13 +289,13 @@ importers:
         specifier: workspace:*
         version: link:../linter-config
       '@janis.me/themed':
-        specifier: ^0.2.1
+        specifier: catalog:ui
         version: 0.2.1
       '@janis.me/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       surimi:
-        specifier: ^0.2.2
+        specifier: catalog:ui
         version: 0.2.2
 
 packages:
