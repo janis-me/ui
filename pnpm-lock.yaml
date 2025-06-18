@@ -281,9 +281,15 @@ importers:
       '@janis.me/linter-config':
         specifier: workspace:*
         version: link:../linter-config
+      '@janis.me/themed':
+        specifier: ^0.2.1
+        version: 0.2.1
       '@janis.me/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
+      surimi:
+        specifier: ^0.2.2
+        version: 0.2.2
 
 packages:
 
@@ -640,6 +646,10 @@ packages:
 
   '@janis.me/themed@0.2.0':
     resolution: {integrity: sha512-vtpZs7BAkvQWlwtZA2n7wfRdhV5KdM7jFxPucfKiG7Pdh8XGk+MSFJNanqqKZX33VXEsFrf3rFXtJ3uTt+0J9A==}
+    engines: {node: '>=22.11.0'}
+
+  '@janis.me/themed@0.2.1':
+    resolution: {integrity: sha512-j+9XPSPL3yKB6MJRMXugQFALpTvWSfj+Y3Sd06vACZJIEFIPo5v7xmX3GjQxbB/FuOp+E65q7NvbnLHwdNnXVQ==}
     engines: {node: '>=22.11.0'}
 
   '@joshwooding/vite-plugin-react-docgen-typescript@0.6.0':
@@ -3230,6 +3240,9 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  surimi@0.2.2:
+    resolution: {integrity: sha512-QBaQ+FrJicfHgGzNTo/PdGTbEynd6EPVLvvl1azN8QcJEQWKyjuWWlo4EV3iiwBR0P9XhV9mepeRTiL6yrHjdg==}
+
   synckit@0.11.6:
     resolution: {integrity: sha512-2pR2ubZSV64f/vqm9eLPz/KOvR9Dm+Co/5ChLgeHl0yEDRc6h5hXHoxEQH8Y5Ljycozd3p1k5TTSVdzYGkPvLw==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -3840,6 +3853,8 @@ snapshots:
       react-dom: 19.1.0(react@19.1.0)
 
   '@janis.me/themed@0.2.0': {}
+
+  '@janis.me/themed@0.2.1': {}
 
   '@joshwooding/vite-plugin-react-docgen-typescript@0.6.0(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.24)(jiti@2.4.2)(sass@1.89.0)(yaml@2.7.1))':
     dependencies:
@@ -6758,6 +6773,8 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  surimi@0.2.2: {}
 
   synckit@0.11.6:
     dependencies:

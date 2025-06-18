@@ -1,0 +1,20 @@
+@use '@janis.me/themed';
+
+@use './variables/base' as base;
+
+$_final-variables: ();
+
+@mixin base($variables) {
+  // TODO: Add validation
+  $merged: map.merge(base.$vars, $variables);
+
+  $_final-variables: map.merge($_final-variables, $merged) !global;
+}
+
+@mixin configure($args...) {
+  @include themed.configure($_final-variables, $args...);
+}
+
+@mixin apply() {
+  @include themed.apply();
+}

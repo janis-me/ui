@@ -25,7 +25,9 @@
   },
   "devDependencies": {
     "@janis.me/linter-config": "workspace:*",
-    "@janis.me/typescript-config": "workspace:*"
+    "@janis.me/themed": "^0.2.1",
+    "@janis.me/typescript-config": "workspace:*",
+    "surimi": "^0.2.2"
   },
   "peerDependencies": {
     "@types/react": "catalog:react",
