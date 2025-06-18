@@ -6,65 +6,56 @@
 
 @use '@janis.me/themed';
 
-// imports for all modules;
-@use './variables/base';
-@use './variables/button';
-@use './variables/checkbox';
-@use './variables/context-menu';
-@use './variables/dropdown-menu';
-
 // additional imports
 @use './utils';
+@use './themes/index' as themes;
 
-$_all-styles: utils.merge-multiple(base.$vars, button.$vars, checkbox.$vars, context-menu.$vars, dropdown-menu.$vars);
+// List of all components/elements to use. By default, it will include all the components
+$_components: [];
 
-$_default-theme-map: ();
-
+// List of the 'raw' themes to be given to `themed`
 $_themes: ();
 
-// used to only import styles for modules that are actually used
-// this will take `button`, `checkbox`, etc. as arguments
-@mixin components($modules...) {
-  // always include the base variables
-  $_default-theme-map: base.$vars !global;
+@mixin components($args...) {
+  // TODO: add validation
+  $_components: list.append($args, 'base') !global;
+}
 
-  @each $module in $modules {
-    $module-vars: meta.module-variables($module);
-    $vars: map.get($module-vars, 'vars');
+@mixin themes($args...) {
+  // TODO: add validation
 
-    @if $module-vars != null {
-      $_default-theme-map: map.merge($_default-theme-map, $vars) !global;
-    } @else {
-      @warn 'Component `#{$module}` not found. Make sure it exists!';
+  $final-themes: ();
+
+  @each $theme in $args {
+    $name: list.nth(map.keys($theme), 1);
+    $values: map.get($theme, $name);
+
+    $merged: ();
+
+    // Loop through all components the theme has and merge everything into a single map
+    // leaving out the components that are not in the $_components list
+    @each $component-name, $component-values in $values {
+      // If the component list is empty, we include all components
+      @if list.length($_components) == 0 or list.index($_components, $component-name) != null {
+        $merged: map.merge($merged, $component-values);
+      }
     }
-  }
-}
 
-// For every theme, set it to the default theme map
-// That does not allow for proper theming just yet, but it's a start for testing.
-// TODO: Figure out a way to let users easily add dark/light themes.
-// Probably by using the built-in `themed` generators. But then I have to make these not-shit.
-@mixin themes($themes...) {
-  // Check if $_default-theme-map is empty. If so, we include all styles.
-  // Ideally, users should use the `components` mixin, but if they don't we just
-  // include everything.
-  @if list.length(map.keys($_default-theme-map)) == 0 {
-    $_default-theme-map: $_all-styles !global;
+    $final-themes: map.merge(
+      $final-themes,
+      (
+        $name: $merged,
+      )
+    );
   }
 
-  @each $theme in $themes {
-    $_themes: map.set($_themes, $theme, $_default-theme-map) !global;
-  }
-}
-
-@mixin override($themes...) {
-  // TODO: Add validation
-  @each $key, $vals in $themes {
-    $_themes: map.set($_themes, $key, map.merge($_default-theme-map, $vals)) !global;
-  }
+  $_themes: $final-themes !global;
 }
 
 @mixin configure($args...) {
+  @if (list.length(map.keys($_themes)) == 0) {
+    @include themes(themes.$default-light, themes.$default-dark);
+  }
   @include themed.configure($_themes, $args...);
 }
 

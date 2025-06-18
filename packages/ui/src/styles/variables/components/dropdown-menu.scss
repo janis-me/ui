@@ -1,0 +1,38 @@
+@use 'sass:map';
+
+@function make-vars($base) {
+  @return (
+    // Sizes
+    dropdown-menu__width: calc(map.get($base, 'size-6') + map.get($base, 'size-4')),
+    dropdown-menu__height: calc(map.get($base, 'size-5') + map.get($base, 'size-4')),
+    dropdown-menu__padding: map.get($base, 'size-3'),
+    // Colors
+    dropdown-menu__background: map.get($base, 'color-surface'),
+    dropdown-menu__background-hover: map.get($base, 'color-elevated'),
+    dropdown-menu__background-active: map.get($base, 'color-background'),
+    dropdown-menu__color: map.get($base, 'color-text-primary'),
+    dropdown-menu__color-hover: map.get($base, 'color-text-secondary'),
+    dropdown-menu__color-active: map.get($base, 'color-text-tertiary'),
+    // Border
+    dropdown-menu__border-radius: map.get($base, 'border-radius'),
+    dropdown-menu__border-width: map.get($base, 'border-width'),
+    dropdown-menu__border-style: map.get($base, 'border-style'),
+    dropdown-menu__border-color: map.get($base, 'color-border'),
+    // items
+    dropdown-menu__item-height: calc(map.get($base, 'size-5') + map.get($base, 'size-4')),
+    dropdown-menu__item-padding-v: map.get($base, 'size-3'),
+    dropdown-menu__item-padding-h: map.get($base, 'size-4'),
+    dropdown-menu__item-color: map.get($base, 'color-text-primary'),
+    dropdown-menu__item-color-hover: map.get($base, 'color-text-secondary'),
+    dropdown-menu__item-color-disabled: map.get($base, 'color-text-placeholder'),
+    dropdown-menu__item-background: map.get($base, 'color-surface'),
+    dropdown-menu__item-background-hover: map.get($base, 'color-elevated'),
+    // labels
+    dropdown-menu__label-padding-v: map.get($base, 'size-4'),
+    dropdown-menu__label-padding-h: map.get($base, 'size-6'),
+    dropdown-menu__label-color: map.get($base, 'color-text-tertiary'),
+    // separators
+    dropdown-menu__separator-height: 1px,
+    dropdown-menu__separator-background: map.get($base, 'color-border-light')
+  );
+}

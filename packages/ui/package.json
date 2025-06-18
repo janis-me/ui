@@ -8,7 +8,8 @@
       "import": "./src/index.js",
       "types": "./src/index.d.ts"
     },
-    "./styles": "./src/styles/index.scss"
+    "./styles": "./src/styles/index.scss",
+    "./themes": "./src/styles/themes/index.scss"
   },
   "main": "./src/index.js",
   "files": [

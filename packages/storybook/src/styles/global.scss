@@ -1,6 +1,6 @@
 @forward '@janis.me/ui/styles';
 
 @use '@janis.me/ui/styles' as ui;
+@use '@janis.me/ui/themes';
 
-@include ui.themes('light', 'dark');
 @include ui.configure();

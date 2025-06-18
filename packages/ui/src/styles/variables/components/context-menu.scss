@@ -1,0 +1,38 @@
+@use 'sass:map';
+
+@function make-vars($base) {
+  @return (
+    // Sizes
+    context-menu__width: calc(map.get($base, 'size-6') + map.get($base, 'size-4')),
+    context-menu__height: calc(map.get($base, 'size-5') + map.get($base, 'size-4')),
+    context-menu__padding: map.get($base, 'size-3'),
+    // Colors
+    context-menu__background: map.get($base, 'color-surface'),
+    context-menu__background-hover: map.get($base, 'color-elevated'),
+    context-menu__background-active: map.get($base, 'color-background'),
+    context-menu__color: map.get($base, 'color-text-primary'),
+    context-menu__color-hover: map.get($base, 'color-text-secondary'),
+    context-menu__color-active: map.get($base, 'color-text-tertiary'),
+    // Border
+    context-menu__border-radius: map.get($base, 'border-radius'),
+    context-menu__border-width: map.get($base, 'border-width'),
+    context-menu__border-style: map.get($base, 'border-style'),
+    context-menu__border-color: map.get($base, 'color-border'),
+    // items
+    context-menu__item-height: calc(map.get($base, 'size-5') + map.get($base, 'size-4')),
+    context-menu__item-padding-v: map.get($base, 'size-3'),
+    context-menu__item-padding-h: map.get($base, 'size-4'),
+    context-menu__item-color: map.get($base, 'color-text-primary'),
+    context-menu__item-color-hover: map.get($base, 'color-text-secondary'),
+    context-menu__item-color-disabled: map.get($base, 'color-text-placeholder'),
+    context-menu__item-background: map.get($base, 'color-surface'),
+    context-menu__item-background-hover: map.get($base, 'color-elevated'),
+    // labels
+    context-menu__label-padding-v: map.get($base, 'size-4'),
+    context-menu__label-padding-h: map.get($base, 'size-6'),
+    context-menu__label-color: map.get($base, 'color-text-tertiary'),
+    // separators
+    context-menu__separator-height: 1px,
+    context-menu__separator-background: map.get($base, 'color-border-light')
+  );
+}
