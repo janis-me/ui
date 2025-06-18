@@ -6,20 +6,20 @@
     user-select: none;
     touch-action: none;
     width: 100%;
-    height: themed('size-24');
+    height: calc(themed('size-5') + themed('size-3'));
   }
 
   &__track {
-    background-color: themed('gray-3');
+    background-color: themed('color-border');
     position: relative;
     flex-grow: 1;
     border-radius: 9999px;
-    height: themed('size-4');
+    height: themed('size-3');
   }
 
   &__range {
     position: absolute;
-    background-color: themed('gray-12');
+    background-color: themed('color-text-primary');
     border-radius: 9999px;
     height: 100%;
   }
@@ -28,17 +28,17 @@
     display: block;
     width: 20px;
     height: 20px;
-    background-color: themed('gray-12');
-    box-shadow: 0 2px 10px themed('gray-1');
+    background-color: themed('color-text-primary');
+    box-shadow: 0 2px 10px themed('color-elevated');
     border-radius: 10px;
 
     &:hover {
-      background-color: themed('gray-11');
+      background-color: themed('color-text-secondary');
     }
 
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 5px themed('gray-1');
+      box-shadow: 0 0 0 5px themed('color-elevated');
     }
   }
 }

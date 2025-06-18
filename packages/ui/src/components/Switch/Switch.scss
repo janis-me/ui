@@ -1,19 +1,20 @@
 .themed-ui__switch {
-  $switch-width: calc(themed('size-48') - themed('size-6'));
+  // 48 - 6px
+  $switch-width: calc((themed('size-6') + themed('size-5')) - themed('size-6'));
 
-  $thumb-size: themed('size-16');
+  $thumb-size: themed('size-5');
   $thumb-offset: calc($thumb-size);
 
   &__root {
     width: $switch-width;
-    height: themed('size-24');
-    background-color: themed('gray-3');
+    height: calc(themed('size-5') + themed('size-3'));
+    background-color: themed('color-background');
     border-radius: 9999px;
     position: relative;
-    border: 1px solid themed('gray-6');
+    border: 1px solid themed('color-interactive');
 
     &[data-state='checked'] {
-      background-color: themed('primary-9');
+      background-color: themed('color-interactive');
     }
   }
 
@@ -22,7 +23,7 @@
     width: $thumb-size;
     height: $thumb-size;
     aspect-ratio: 1 / 1;
-    background-color: themed('gray-12');
+    background-color: themed('color-text-primary');
     border-radius: 9999px;
     transition: transform 100ms;
 

@@ -15,7 +15,7 @@ $vars: (
   button__border-style: base.get('border-style'),
   button__border-color: base.get('color-border'),
   // primary
-  button--primary__color: base.get('color-text-contrast'),
+  button--primary__color: base.get('color-text-interactive'),
   button--primary__color-disabled: base.get('color-text-placeholder'),
   button--primary__background: base.get('color-interactive'),
   button--primary__background-hover: base.get('color-interactive-hover'),
@@ -29,14 +29,14 @@ $vars: (
   button--secondary__background-active: base.get('color-surface'),
   button--secondary__background-disabled: base.get('color-border-light'),
   // error
-  button--error__color: base.get('color-text-contrast'),
+  button--error__color: base.get('color-text-interactive'),
   button--error__color-disabled: base.get('color-text-placeholder'),
   button--error__background: base.get('color-error'),
   button--error__background-hover: base.get('color-error-hover'),
   button--error__background-active: base.get('color-error-active'),
   button--error__background-disabled: base.get('color-error-disabled'),
   // warning
-  button--warning__color: base.get('color-text-contrast'),
+  button--warning__color: base.get('color-text-interactive'),
   button--warning__color-disabled: base.get('color-text-placeholder'),
   button--warning__background: base.get('color-warning'),
   button--warning__background-hover: base.get('color-warning-hover'),

@@ -3,8 +3,8 @@
   &__sub-content {
     overflow: hidden;
     min-width: 220px;
-    border-radius: themed('size-4');
-    background-color: themed('gray-2');
+    border-radius: themed('context-menu__border-radius');
+    background-color: themed('context-menu__background');
 
     z-index: 1;
   }
@@ -19,44 +19,46 @@
     position: relative;
     user-select: none;
 
-    height: themed('size-32');
-    color: themed('gray-12');
-    padding: 0 themed('size-8') 0 themed('size-24');
+    height: themed('context-menu__item-height');
+    color: themed('context-menu__item-color');
+    padding: 0 themed('size-4') 0 calc(themed('size-5') + themed('size-3'));
+    background-color: themed('context-menu__item-background');
 
     &:focus-visible {
       outline: none;
     }
 
     &[data-disabled] {
-      color: themed('gray-6');
+      color: themed('context-menu__item-color-disabled');
       pointer-events: 'none';
     }
 
     &[data-highlighted] {
-      background-color: themed('gray-3');
-      color: themed('gray-12');
+      background-color: themed('context-menu__item-background-hover');
+      color: themed('context-menu__item-color-hover');
     }
   }
 
   &__sub-trigger[data-state='open'] {
-    background-color: themed('gray-4');
+    // TODO: Add another color for open state
+    background-color: themed('context-menu__item-background-hover');
   }
 
   &__label {
-    color: themed('gray-9');
-    padding: 0 themed('size-6') 0 themed('size-24');
+    color: themed('context-menu__label-color');
+    padding: themed('context-menu__label-padding-v') themed('context-menu__label-padding-h');
   }
 
   &__separator {
-    height: themed('size-1');
-    background-color: themed('gray-3');
+    height: themed('context-menu__separator-height');
+    background-color: themed('context-menu__separator-background');
     margin: 5px;
   }
 
   &__item-indicator {
     position: absolute;
     left: 0;
-    width: themed('size-24');
+    width: calc(themed('size-5') + themed('size-3'));
     display: inline-flex;
     align-items: center;
     justify-content: center;

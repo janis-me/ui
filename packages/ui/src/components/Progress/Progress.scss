@@ -4,9 +4,9 @@
     overflow: hidden;
     background-color: transparent;
     width: 100%;
-    height: themed('size-24');
-    border-radius: themed('size-4');
-    background: themed('gray-3');
+    height: calc(themed('size-5') + themed('size-3'));
+    border-radius: themed('size-3');
+    background: themed('color-border');
 
     /* Fix overflow clipping in Safari */
     /* https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0 */
@@ -14,27 +14,27 @@
   }
 
   &--primary &__indicator {
-    background-color: themed('primary-9');
+    background-color: themed('color-interactive');
   }
 
   &--secondary &__indicator {
-    background-color: themed('gray-9');
+    background-color: themed('color-background');
   }
 
   &--info &__indicator {
-    background-color: themed('info-9');
+    background-color: themed('color-info');
   }
 
   &--success &__indicator {
-    background-color: themed('success-9');
+    background-color: themed('color-success');
   }
 
   &--warning &__indicator {
-    background-color: themed('warning-9');
+    background-color: themed('color-warning');
   }
 
   &--error &__indicator {
-    background-color: themed('error-9');
+    background-color: themed('color-error');
   }
 
   &__indicator {

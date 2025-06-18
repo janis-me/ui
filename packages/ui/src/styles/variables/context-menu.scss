@@ -1,0 +1,36 @@
+@use './base';
+
+$vars: (
+  // Sizes
+  context-menu__width: calc(base.get('size-6') + base.get('size-4')),
+  context-menu__height: calc(base.get('size-5') + base.get('size-4')),
+  context-menu__padding: base.get('size-3'),
+  // Colors
+  context-menu__background: base.get('color-surface'),
+  context-menu__background-hover: base.get('color-elevated'),
+  context-menu__background-active: base.get('color-background'),
+  context-menu__color: base.get('color-text-primary'),
+  context-menu__color-hover: base.get('color-text-secondary'),
+  context-menu__color-active: base.get('color-text-tertiary'),
+  // Border
+  context-menu__border-radius: base.get('border-radius'),
+  context-menu__border-width: base.get('border-width'),
+  context-menu__border-style: base.get('border-style'),
+  context-menu__border-color: base.get('color-border'),
+  // items
+  context-menu__item-height: calc(base.get('size-5') + base.get('size-4')),
+  context-menu__item-padding-v: base.get('size-3'),
+  context-menu__item-padding-h: base.get('size-4'),
+  context-menu__item-color: base.get('color-text-primary'),
+  context-menu__item-color-hover: base.get('color-text-secondary'),
+  context-menu__item-color-disabled: base.get('color-text-placeholder'),
+  context-menu__item-background: base.get('color-surface'),
+  context-menu__item-background-hover: base.get('color-elevated'),
+  // labels
+  context-menu__label-padding-v: base.get('size-4'),
+  context-menu__label-padding-h: base.get('size-6'),
+  context-menu__label-color: base.get('color-text-tertiary'),
+  // separators
+  context-menu__separator-height: 1px,
+  context-menu__separator-background: base.get('color-border-light')
+);
