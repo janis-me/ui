@@ -1,0 +1,72 @@
+$colors: (
+  color-text-primary: null,
+  color-text-secondary: null,
+  color-text-tertiary: null,
+  color-text-placeholder: null,
+  // links
+  color-text-link: null,
+  color-text-link-hover: null,
+  color-text-link-active: null,
+  color-text-link-visited: null,
+  // backgrounds
+  color-background: null,
+  color-surface: null,
+  color-elevated: null,
+  // borders
+  color-border: null,
+  color-border-light: null,
+  // interactive backgrounds
+  color-interactive-text: null,
+  color-interactive: null,
+  color-interactive-hover: null,
+  color-interactive-active: null,
+  color-interactive-disabled: null,
+  color-interactive-light: null,
+  // error
+  color-error-text: null,
+  color-error: null,
+  color-error-hover: null,
+  color-error-active: null,
+  color-error-disabled: null,
+  color-error-light: null,
+  // success
+  color-success-text: null,
+  color-success: null,
+  color-success-hover: null,
+  color-success-active: null,
+  color-success-disabled: null,
+  color-success-light: null,
+  // warning
+  color-warning-text: null,
+  color-warning: null,
+  color-warning-hover: null,
+  color-warning-active: null,
+  color-warning-disabled: null,
+  color-warning-light: null,
+  // info
+  color-info-text: null,
+  color-info: null,
+  color-info-hover: null,
+  color-info-active: null,
+  color-info-disabled: null,
+  color-info-light: null,
+);
+
+$borders: (
+  // Borders
+  // ----------------
+  border-radius: 3px,
+  border-width: 1px,
+  border-style: solid
+);
+
+$sizes: (
+  size-1: 1px,
+  size-2: 2px,
+  size-3: 4px,
+  size-4: 8px,
+  size-5: 16px,
+  size-6: 32px,
+  size-7: 64px,
+  size-8: 128px,
+);

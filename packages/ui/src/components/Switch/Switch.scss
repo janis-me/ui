@@ -1,33 +1,33 @@
 .themed-ui__switch {
-  $switch-width: calc(themed('size-48') - themed('size-6'));
-
-  $thumb-size: themed('size-16');
-  $thumb-offset: calc($thumb-size);
-
   &__root {
-    width: $switch-width;
-    height: themed('size-24');
-    background-color: themed('gray-3');
-    border-radius: 9999px;
+    width: themed('switch__width');
+    height: themed('switch__height');
+    background-color: themed('switch__background-color');
+    border-radius: themed('switch__border-radius');
     position: relative;
-    border: 1px solid themed('gray-6');
+    border: themed('switch__border-width') themed('switch__border-style') themed('switch__border-color');
+    cursor: pointer;
 
     &[data-state='checked'] {
-      background-color: themed('primary-9');
+      background-color: themed('switch__background-color-active');
+      border: 1px solid themed('switch__border-color-active');
     }
   }
 
   &__thumb {
     display: block;
-    width: $thumb-size;
-    height: $thumb-size;
+    width: themed('switch__thumb-size');
+    height: themed('switch__thumb-size');
     aspect-ratio: 1 / 1;
-    background-color: themed('gray-12');
-    border-radius: 9999px;
-    transition: transform 100ms;
+    background-color: themed('switch__thumb-background-color');
+    border-radius: themed('switch__border-radius');
+    border: 1px solid themed('switch__border-color');
+    transition: all 100ms ease;
+    transform: translateX(-2px);
 
     &[data-state='checked'] {
-      transform: translateX($thumb-offset);
+      transform: translateX(themed('switch__thumb-offset'));
+      border: 1px solid themed('switch__border-color-active');
     }
   }
 }

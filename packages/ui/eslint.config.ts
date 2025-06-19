@@ -1,3 +1,7 @@
-import { config } from '@janis.me/linter-config';
+import { ConfigArray, reactConfig, tseslint } from '@janis.me/linter-config';
 
-export default config;
+export const config: ConfigArray = tseslint.config(...reactConfig, {
+  rules: {
+    'react/display-name': 'off',
+  },
+});

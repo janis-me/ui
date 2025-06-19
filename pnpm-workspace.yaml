@@ -5,39 +5,42 @@ ignoredBuiltDependencies:
   - esbuild
 
 catalogs:
+  ui:
+    '@janis.me/themed': '^0.2.1'
+    'surimi': '^0.2.2'
   build:
     vite: ^6.3.5
-    '@vitejs/plugin-react': ^4.5.0
-    sass: ^1.89.0
+    '@vitejs/plugin-react': ^4.5.2
+    sass: ^1.89.2
     typescript: ^5.8.3
     vite-plugin-dts: ^4.5.4
     vite-plugin-static-copy: ^2.3.1
   format:
     '@ianvs/prettier-plugin-sort-imports': ^4.4.2
-    prettier-plugin-packagejson: ^2.5.14
+    prettier-plugin-packagejson: ^2.5.15
     prettier: ^3.5.3
   lint:
-    '@eslint/js': ^9.27.0
+    '@eslint/js': ^9.29.0
     '@eslint/eslintrc': ^3.3.1
     eslint-plugin-react-hooks: ^5.2.0
     eslint-plugin-react: ^7.37.5
-    eslint: ^9.27.0
-    typescript-eslint: ^8.33.0
+    eslint: ^9.29.0
+    typescript-eslint: ^8.34.1
     jiti: ^2.4.2
-    eslint-plugin-storybook: ^9.0.0
+    eslint-plugin-storybook: ^9.0.11
   test:
-    vitest: ^3.1.4
-    '@vitest/browser': ^3.1.4
-    '@playwright/test': ^1.52.0
-    '@vitejs/plugin-react': '^4.5.0'
-    '@vitest/coverage-v8': '^3.1.4'
+    vitest: ^3.2.4
+    '@vitest/browser': ^3.2.4
+    '@playwright/test': ^1.53.0
+    '@vitejs/plugin-react': '^4.5.2'
+    '@vitest/coverage-v8': '^3.2.4'
     '@storybook/addon-vitest': '9.0.0'
   types:
-    '@types/node': ^22.15.24
+    '@types/node': ^22.15.32
   script:
     taze: ^19.1.0
   react:
     react: ^19.1.0
     react-dom: ^19.1.0
-    '@types/react': ^19.1.6
-    '@types/react-dom': ^19.1.5
+    '@types/react': ^19.1.8
+    '@types/react-dom': ^19.1.6

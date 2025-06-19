@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use 'sass:meta';
+
+@use '@janis.me/themed/generators';
+
+@function generate-themed-colors($primary, $gray: null, $info: null, $success: null, $warning: null, $error: null) {
+  $plugin-res: generators.colors($primary, $gray, $info, $success, $warning, $error);
+  $extend-fn: map.get($plugin-res, 'extend-all');
+
+  $theme-colors: meta.call($extend-fn, (), 'themed');
+
+  @return $theme-colors;
+}

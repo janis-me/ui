@@ -1,21 +1,25 @@
 .themed-ui__checkbox {
   &__root {
-    background-color: transparent;
-    width: themed('size-24');
-    height: themed('size-24');
-    border-radius: themed('size-4');
+    background-color: themed('checkbox__background');
+    width: themed('checkbox__size');
+    height: themed('checkbox__size');
+    border-radius: themed('checkbox__border-radius');
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid themed('gray-6');
+    border: themed('checkbox__border-width') themed('checkbox__border-style') themed('checkbox__border-color');
     cursor: pointer;
 
     &:hover {
-      border: 1px solid themed('gray-7');
+      border: themed('checkbox__border-width') themed('checkbox__border-style') themed('checkbox__border-color-hover');
+    }
+
+    &[data-state='checked'] {
+      border: themed('checkbox__border-width') themed('checkbox__border-style') themed('checkbox__color-active');
     }
   }
 
   &__indicator {
-    color: themed('gray-12');
+    color: themed('checkbox__color');
   }
 }

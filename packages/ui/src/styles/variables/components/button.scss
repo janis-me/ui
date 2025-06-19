@@ -1,0 +1,57 @@
+@use 'sass:map';
+
+@function make-vars($base) {
+  @return (
+    // sizes
+    button__padding-h: map.get($base, 'size-5'),
+    button__padding-v: 0,
+    button__height: map.get($base, 'size-6'),
+    // Colors
+    button__color: map.get($base, 'color-text-primary'),
+    button__background: map.get($base, 'color-surface'),
+    button__background-hover: map.get($base, 'color-elevated'),
+    // border
+    button__border-radius: map.get($base, 'border-radius'),
+    button__border-width: map.get($base, 'border-width'),
+    button__border-style: map.get($base, 'border-style'),
+    button__border-color: map.get($base, 'color-border'),
+    // primary
+    button--primary__color: map.get($base, 'color-interactive-text'),
+    button--primary__color-disabled: map.get($base, 'color-text-placeholder'),
+    button--primary__background: map.get($base, 'color-interactive'),
+    button--primary__background-hover: map.get($base, 'color-interactive-hover'),
+    button--primary__background-active: map.get($base, 'color-interactive-active'),
+    button--primary__background-disabled: map.get($base, 'color-interactive-disabled'),
+    // secondary
+    button--secondary__color: map.get($base, 'color-text-primary'),
+    button--secondary__color-disabled: map.get($base, 'color-text-placeholder'),
+    button--secondary__background: map.get($base, 'color-elevated'),
+    button--secondary__background-hover: map.get($base, 'color-surface'),
+    button--secondary__background-active: map.get($base, 'color-surface'),
+    button--secondary__background-disabled: map.get($base, 'color-border-light'),
+    // error
+    button--error__color: map.get($base, 'color-interactive-text'),
+    button--error__color-disabled: map.get($base, 'color-text-placeholder'),
+    button--error__background: map.get($base, 'color-error'),
+    button--error__background-hover: map.get($base, 'color-error-hover'),
+    button--error__background-active: map.get($base, 'color-error-active'),
+    button--error__background-disabled: map.get($base, 'color-error-disabled'),
+    // warning
+    button--warning__color: map.get($base, 'color-interactive-text'),
+    button--warning__color-disabled: map.get($base, 'color-text-placeholder'),
+    button--warning__background: map.get($base, 'color-warning'),
+    button--warning__background-hover: map.get($base, 'color-warning-hover'),
+    button--warning__background-active: map.get($base, 'color-warning-active'),
+    button--warning__background-disabled: map.get($base, 'color-warning-disabled'),
+    // small
+    button--small__height: calc(map.get($base, 'size-5') + map.get($base, 'size-4')),
+    button--small__padding-h: map.get($base, 'size-3'),
+    button--small__padding-v: 0,
+    // large
+    button--large__height: calc(map.get($base, 'size-6') + map.get($base, 'size-4')),
+    button--large__padding-h: map.get($base, 'size-5'),
+    button--large__padding-v: map.get($base, 'size-4'),
+    // round
+    button--round__padding: map.get($base, 'size-4')
+  );
+}

@@ -1,8 +1,8 @@
 .context-menu-story {
   &__trigger {
-    padding: themed('size-32');
-    border: 1px dashed themed('gray-12');
-    color: themed('gray-12');
+    padding: calc(themed('size-3') + themed('size-2'));
+    border: 1px dashed themed('color-text-primary');
+    color: themed('color-text-primary');
     cursor: context-menu;
   }
 }

@@ -3,14 +3,17 @@
   &__sub-content {
     overflow: hidden;
     min-width: 220px;
-    border-radius: themed('size-4');
-    background-color: themed('gray-2');
+    background-color: themed('dropdown-menu__background');
+    border-radius: themed('dropdown-menu__border-radius');
+    border-style: themed('dropdown-menu__border-style');
+    border-color: themed('dropdown-menu__border-color');
+    border-width: themed('dropdown-menu__border-width');
 
     z-index: 1;
   }
 
   &__content:not(:has(&__arrow)) {
-    margin-top: themed('size-6');
+    margin-top: calc(themed('size-3') + themed('size-2'));
   }
 
   &__item,
@@ -23,52 +26,53 @@
     position: relative;
     user-select: none;
 
-    height: themed('size-32');
-    color: themed('gray-12');
-    padding: 0 themed('size-8') 0 themed('size-24');
+    height: themed('dropdown-menu__item-height');
+    color: themed('dropdown-menu__item-color');
+    background-color: themed('dropdown-menu__item-background');
+    padding: 0 themed('dropdown-menu__item-padding-h');
 
     &:focus-visible {
       outline: none;
     }
 
     &[data-disabled] {
-      color: themed('gray-6');
+      color: themed('dropdown-menu__item-color-disabled');
       pointer-events: 'none';
     }
 
     &[data-highlighted] {
-      background-color: themed('gray-3');
-      color: themed('gray-12');
+      background-color: themed('dropdown-menu__item-background-hover');
+      color: themed('dropdown-menu__item-color-hover');
     }
   }
 
   &__sub-trigger {
     &[data-state='open'] {
-      background-color: themed('gray-4');
+      background-color: themed('dropdown-menu__item-background-hover');
     }
   }
 
   &__label {
-    color: themed('gray-9');
-    padding: 0 themed('size-6') 0 themed('size-24');
+    color: themed('dropdown-menu__label-color');
+    padding: themed('dropdown-menu__label-padding-v') themed('dropdown-menu__label-padding-h');
   }
 
   &__separator {
-    height: themed('size-1');
-    background-color: themed('gray-3');
+    height: themed('dropdown-menu__separator-height');
+    background-color: themed('dropdown-menu__separator-background');
     margin: 5px;
   }
 
   &__item-indicator {
     position: absolute;
     left: 0;
-    width: themed('size-24');
+    width: calc(themed('size-5') + themed('size-3'));
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
 
   &__arrow {
-    fill: themed('gray-2');
+    fill: themed('dropdown-menu__background');
   }
 }

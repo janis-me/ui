@@ -1,10 +1,16 @@
-@forward '@janis.me/react-themed';
+@forward '@janis.me/ui/styles';
 
-@use 'sass:meta';
-@use '@janis.me/react-themed' as themed;
-@use '@janis.me/react-themed/generators';
-@use '@janis.me/react-themed/plugins';
+@use '@janis.me/ui/styles' as ui;
+@use '@janis.me/ui/themes';
 
-$themes: ();
+$colors: (
+  'primary': #3d63dd,
+  'gray': #37373b,
+  'info': #2563eb,
+  'success': #16a34a,
+  'warning': #d97706,
+  'error': #dc2626,
+);
 
-@include themed.configure($themes, generators.size(), generators.colors($primary: #16b6b3, $gray: #222425, $target-space: oklch));
+@include ui.themes(themes.default-light($colors...), themes.default-dark($colors...));
+@include ui.configure();

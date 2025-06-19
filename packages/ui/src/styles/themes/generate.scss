@@ -1,0 +1,31 @@
+@use 'sass:meta';
+@use 'sass:map';
+
+@use '../variables/components/button';
+@use '../variables/components/checkbox';
+@use '../variables/components/context-menu';
+@use '../variables/components/dropdown-menu';
+@use '../variables/components/switch';
+
+$components: ('button', 'checkbox', 'context-menu', 'dropdown-menu', 'switch');
+
+@function generate-theme($key, $values) {
+  // TODO: Validate input
+
+  $theme: (
+    'base': $values,
+  );
+
+  @each $component-name in $components {
+    $make-vars: meta.get-function('make-vars', $module: $component-name);
+    $component-variables: meta.call($make-vars, $values);
+    $theme: map.merge(
+      $theme,
+      (
+        $component-name: $component-variables,
+      )
+    );
+  }
+
+  @return ($key: $theme);
+}

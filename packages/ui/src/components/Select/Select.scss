@@ -1,13 +1,13 @@
 .themed-ui__select {
   &__trigger {
     border: none;
-    padding: 0 themed('size-16');
+    padding: 0 themed('size-5');
     border-radius: 3px;
     cursor: pointer;
     transition: all 100ms ease-in-out;
-    background-color: themed('gray-3');
-    color: themed('gray-12');
-    height: themed('size-32');
+    background-color: themed('color-border');
+    color: themed('color-text-primary');
+    height: calc(themed('size-3') + themed('size-2'));
     font-size: 1rem;
     width: 100%;
     display: flex;
@@ -18,8 +18,8 @@
   &__content,
   &__sub-content {
     overflow: hidden;
-    border-radius: themed('size-4');
-    background-color: themed('gray-2');
+    border-radius: themed('size-3');
+    background-color: themed('color-surface');
     width: var(--radix-select-trigger-width);
     max-height: var(--radix-select-content-available-height);
 
@@ -28,16 +28,16 @@
 
   &__content:not(:has(&__arrow)) {
     &[data-side='top'] {
-      margin-bottom: themed('size-6');
+      margin-bottom: calc(themed('size-3') + themed('size-2'));
     }
     &[data-side='bottom'] {
-      margin-top: themed('size-6');
+      margin-top: calc(themed('size-3') + themed('size-2'));
     }
     &[data-side='left'] {
-      margin-right: themed('size-6');
+      margin-right: calc(themed('size-3') + themed('size-2'));
     }
     &[data-side='right'] {
-      margin-left: themed('size-6');
+      margin-left: calc(themed('size-3') + themed('size-2'));
     }
   }
 
@@ -52,51 +52,51 @@
     position: relative;
     user-select: none;
 
-    height: themed('size-32');
-    color: themed('gray-12');
-    padding: 0 themed('size-8') 0 themed('size-24');
+    height: calc(themed('size-3') + themed('size-2'));
+    color: themed('color-text-primary');
+    padding: 0 themed('size-4') 0 calc(themed('size-5') + themed('size-3'));
 
     &:focus-visible {
       outline: none;
     }
 
     &[data-disabled] {
-      color: themed('gray-6');
+      color: themed('color-text-placeholder');
       pointer-events: 'none';
     }
 
     &[data-highlighted] {
-      background-color: themed('gray-3');
-      color: themed('gray-12');
+      background-color: themed('color-border');
+      color: themed('color-text-primary');
     }
   }
 
   &__sub-trigger {
     &[data-state='open'] {
-      background-color: themed('gray-4');
+      background-color: themed('color-background');
     }
   }
 
   &__label {
-    color: themed('gray-9');
+    color: themed('color-text-tertiary');
   }
 
   &__separator {
-    height: themed('size-1');
-    background-color: themed('gray-3');
+    height: 1px;
+    background-color: themed('color-border');
     margin: 5px;
   }
 
   &__item-indicator {
     position: absolute;
     left: 0;
-    width: themed('size-24');
+    width: calc(themed('size-5') + themed('size-3'));
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
 
   &__arrow {
-    fill: themed('gray-2');
+    fill: themed('color-surface');
   }
 }

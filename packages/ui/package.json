@@ -7,9 +7,11 @@
     ".": {
       "import": "./src/index.js",
       "types": "./src/index.d.ts"
-    }
+    },
+    "./styles": "./src/styles/index.scss",
+    "./themes": "./src/styles/themes/index.scss"
   },
-  "main": "src/index.js",
+  "main": "./src/index.js",
   "files": [
     "./src/**/*",
     "README.md"
@@ -25,13 +27,19 @@
   },
   "devDependencies": {
     "@janis.me/linter-config": "workspace:*",
-    "@janis.me/typescript-config": "workspace:*"
+    "@janis.me/themed": "catalog:ui",
+    "@janis.me/typescript-config": "workspace:*",
+    "surimi": "catalog:ui"
   },
   "peerDependencies": {
+    "@janis.me/themed": "catalog:ui",
     "@types/react": "catalog:react",
     "@types/react-dom": "catalog:react",
     "react": "catalog:react",
     "react-dom": "catalog:react",
-    "sass": "catalog:build"
-  }
+    "sass": "catalog:build",
+    "surimi": "catalog:ui"
+  },
+  "sass": "./src/styles/index.scss",
+  "scss": "./src/styles/index.scss"
 }

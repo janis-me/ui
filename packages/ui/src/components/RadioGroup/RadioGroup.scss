@@ -7,18 +7,18 @@
 
   &__item {
     background-color: transparent;
-    width: themed('size-16');
-    height: themed('size-16');
+    width: themed('size-5');
+    height: themed('size-5');
     border-radius: 100%;
-    border: 1px solid themed('gray-6');
+    border: 1px solid themed('color-text-placeholder');
 
     &:hover {
-      border: 1px solid themed('gray-7');
+      border: 1px solid themed('color-border');
     }
   }
 
   &__indicator {
-    color: themed('gray-12');
+    color: themed('color-text-primary');
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,11 +30,11 @@
     &::after {
       content: '';
       display: block;
-      width: themed('size-8');
-      height: themed('size-8');
+      width: themed('size-4');
+      height: themed('size-4');
       aspect-ratio: 1 / 1;
       border-radius: 50%;
-      background-color: themed('gray-12');
+      background-color: themed('color-text-primary');
     }
   }
 }

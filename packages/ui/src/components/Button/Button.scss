@@ -1,69 +1,76 @@
+@use '@janis.me/themed' as *;
+
 .themed-ui__button {
   &__root {
     border: none;
-    padding: 0 themed('size-16');
-    border-radius: 3px;
+    padding: themed('button__padding-v') themed('button__padding-h');
+    border-radius: themed('button__border-radius');
     cursor: pointer;
     transition: all 100ms ease-in-out;
-    height: themed('size-32');
-    font-size: 1em;
+    height: themed('button__height');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
   }
 
   &--primary {
-    background-color: themed('primary-9');
-    color: themed('gray-12');
+    background-color: themed('button--primary__background');
+    color: themed('button--primary__color');
 
-    &:hover {
-      background-color: themed('primary-10');
+    &[disabled] {
+      background-color: themed('button--primary__background-disabled');
+      color: themed('button--primary__color-disabled');
+      cursor: not-allowed;
+    }
+
+    &:not([disabled]):hover {
+      background-color: themed('button--primary__background-hover');
     }
   }
 
   &--secondary {
-    background-color: themed('gray-3');
-    color: themed('gray-12');
+    background-color: themed('button--secondary__background');
+    color: themed('button--secondary__color');
 
     &:hover {
-      background-color: themed('gray-4');
+      background-color: themed('button--secondary__background-hover');
     }
   }
 
   &--error {
-    background-color: themed('error-9');
-    color: themed('gray-12');
+    background-color: themed('button--error__background');
+    color: themed('button--error__color');
 
     &:hover {
-      background-color: themed('error-10');
+      background-color: themed('button--error__background-hover');
     }
   }
 
   &--round {
     border-radius: 50%;
-    padding: themed('size-8');
+    padding: themed('button--round__padding');
     aspect-ratio: 1 / 1;
+    padding: 0;
 
     &.themed-ui__button--small {
-      height: themed('size-24');
       padding: 0;
     }
-
     &.themed-ui__button--large {
-      height: themed('size-40');
       padding: 0;
     }
   }
 
   &--small {
-    height: themed('size-24');
-    padding: 0 themed('size-8');
-
-    svg {
-      width: themed('size-12');
-      height: themed('size-12');
-    }
+    height: themed('button--small__height');
+    padding: themed('button--small__padding-v') themed('button--small__padding-h');
   }
 
   &--large {
-    height: themed('size-40');
-    padding: 0 themed('size-24');
+    height: themed('button--large__height');
+    padding: themed('button--large__padding-v') themed('button--large__padding-h');
   }
 }

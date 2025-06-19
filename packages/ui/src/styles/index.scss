@@ -1,0 +1,64 @@
+@forward '@janis.me/themed';
+
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:list';
+
+@use '@janis.me/themed';
+
+// additional imports
+@use './utils';
+@use './themes/index' as themes;
+
+// List of all components/elements to use. By default, it will include all the components
+$_components: [];
+
+// List of the 'raw' themes to be given to `themed`
+$_themes: ();
+
+@mixin components($args...) {
+  // TODO: add validation
+  $_components: list.append($args, 'base') !global;
+}
+
+@mixin themes($args...) {
+  // TODO: add validation
+
+  $final-themes: ();
+
+  @each $theme in $args {
+    $name: list.nth(map.keys($theme), 1);
+    $values: map.get($theme, $name);
+
+    $merged: ();
+
+    // Loop through all components the theme has and merge everything into a single map
+    // leaving out the components that are not in the $_components list
+    @each $component-name, $component-values in $values {
+      // If the component list is empty, we include all components
+      @if list.length($_components) == 0 or list.index($_components, $component-name) != null {
+        $merged: map.merge($merged, $component-values);
+      }
+    }
+
+    $final-themes: map.merge(
+      $final-themes,
+      (
+        $name: $merged,
+      )
+    );
+  }
+
+  $_themes: $final-themes !global;
+}
+
+@mixin configure($args...) {
+  @if (list.length(map.keys($_themes)) == 0) {
+    @include themes(themes.default-light(), themes.default-dark());
+  }
+  @include themed.configure($_themes, $args...);
+}
+
+@mixin apply() {
+  @include themed.apply();
+}

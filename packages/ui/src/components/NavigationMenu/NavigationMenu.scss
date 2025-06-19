@@ -8,14 +8,14 @@
   }
 
   &__item {
-    height: themed('size-32');
+    height: calc(themed('size-3') + themed('size-2'));
   }
 
   &__list {
     display: flex;
     justify-content: center;
     gap: themed('size-2');
-    background-color: themed('gray-2');
+    background-color: themed('color-surface');
     padding: 4px;
     border-radius: 6px;
     list-style: none;
@@ -31,22 +31,22 @@
 
   &__trigger,
   &__link {
-    height: themed('size-32');
-    padding: themed('size-8') themed('size-12');
+    height: calc(themed('size-3') + themed('size-2'));
+    padding: themed('size-4') themed('size-5');
     outline: none;
     user-select: none;
     line-height: 1;
-    border-radius: themed('size-4');
-    background-color: themed('gray-3');
+    border-radius: themed('size-3');
+    background-color: themed('color-border');
     border: none;
-    color: themed('gray-12');
+    color: themed('color-text-primary');
     font-size: 1em;
 
     &:focus {
-      box-shadow: 0 0 0 2px themed('gray-1');
+      box-shadow: 0 0 0 2px themed('color-elevated');
     }
     &:hover {
-      background-color: themed('gray-4');
+      background-color: themed('color-background');
     }
   }
 
@@ -65,16 +65,16 @@
   }
 
   &__content {
-    background-color: themed('gray-3');
+    background-color: themed('color-border');
     position: absolute;
-    color: themed('gray-12');
-    border-radius: themed('size-4');
+    color: themed('color-text-primary');
+    border-radius: themed('size-3');
     animation-duration: 250ms;
     animation-timing-function: ease;
 
     &[data-orientation='horizontal'] {
       left: 0;
-      top: calc(themed('size-32') + themed('size-12'));
+      top: calc(themed('size-6') + themed('size-4'));
 
       &[data-motion='from-start'] {
         animation-name: enterFromLeft;
@@ -90,7 +90,7 @@
       }
     }
     &[data-orientation='vertical'] {
-      left: calc(100% + themed('size-4'));
+      left: calc(100% + themed('size-3'));
       top: 0;
 
       &[data-motion='from-start'] {
@@ -114,18 +114,18 @@
     justify-content: center;
     overflow: hidden;
     z-index: 1;
-    color: themed('gray-3');
+    color: themed('color-border');
     transition:
       width,
       transform 200ms ease;
 
     &[data-orientation='horizontal'] {
       left: 0;
-      top: calc(100% - themed('size-4'));
+      top: calc(100% - themed('size-3'));
     }
 
     &[data-orientation='vertical'] {
-      left: calc(100% - themed('size-4'));
+      left: calc(100% - themed('size-3'));
     }
 
     &[data-state='visible'] {
@@ -146,7 +146,7 @@
 
     transform-origin: top center;
     margin-top: 10px;
-    background-color: themed('gray-2');
+    background-color: themed('color-surface');
     border-radius: 6px;
     overflow: hidden;
     box-shadow:
