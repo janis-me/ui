@@ -1,4 +1,5 @@
 import * as Accordion from './components/Accordion/Accordion';
+import * as Between from './components/Between/Between';
 import * as Button from './components/Button/Button';
 import * as Card from './components/Card/Card';
 import * as Checkbox from './components/Checkbox/Checkbox';
@@ -12,4 +13,4 @@ import * as Select from './components/Select/Select';
 import * as Slider from './components/Slider/Slider';
 import * as Switch from './components/Switch/Switch';
 
-export { Accordion, Button, Card, Checkbox, ContextMenu, DropdownMenu, Label, NavigationMenu, Progress, RadioGroup, Select, Slider, Switch };
+export { Accordion, Between, Button, Card, Checkbox, ContextMenu, DropdownMenu, Label, NavigationMenu, Progress, RadioGroup, Select, Slider, Switch };

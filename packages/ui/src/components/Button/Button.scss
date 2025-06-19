@@ -13,11 +13,21 @@
     align-items: center;
   }
 
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
   &--primary {
     background-color: themed('button--primary__background');
     color: themed('button--primary__color');
 
-    &:hover {
+    &[disabled] {
+      background-color: themed('button--primary__background-disabled');
+      color: themed('button--primary__color-disabled');
+      cursor: not-allowed;
+    }
+
+    &:not([disabled]):hover {
       background-color: themed('button--primary__background-hover');
     }
   }
