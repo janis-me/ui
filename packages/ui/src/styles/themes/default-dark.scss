@@ -18,8 +18,6 @@
       color-text-secondary: map.get($_dark, 'gray-11'),
       color-text-tertiary: map.get($_dark, 'gray-10'),
       color-text-placeholder: map.get($_dark, 'gray-9'),
-      // interactive text
-      color-text-interactive: map.get($_dark, 'gray-12'),
       // links
       color-text-link: map.get($_dark, 'primary-11'),
       color-text-link-hover: map.get($_dark, 'primary-10'),
@@ -33,30 +31,40 @@
       color-border: map.get($_dark, 'gray-8'),
       color-border-light: map.get($_dark, 'gray-7'),
       // Interactive backgrounds
+      color-interactive-text: map.get($_dark, 'gray-12'),
       color-interactive: map.get($_dark, 'primary-9'),
       color-interactive-hover: map.get($_dark, 'primary-8'),
       color-interactive-active: map.get($_dark, 'primary-7'),
       color-interactive-disabled: map.get($_dark, 'primary-6'),
+      color-interactive-light: map.get($_dark, 'primary-3'),
       // Error
+      color-error-text: map.get($_dark, 'error-12'),
       color-error: map.get($_dark, 'error-9'),
       color-error-hover: map.get($_dark, 'error-8'),
       color-error-active: map.get($_dark, 'error-7'),
       color-error-disabled: map.get($_dark, 'error-6'),
+      color-error-light: map.get($_dark, 'error-3'),
       // Success
+      color-success-text: map.get($_dark, 'success-12'),
       color-success: map.get($_dark, 'success-9'),
       color-success-hover: map.get($_dark, 'success-8'),
       color-success-active: map.get($_dark, 'success-7'),
       color-success-disabled: map.get($_dark, 'success-6'),
+      color-success-light: map.get($_dark, 'success-3'),
       // Warning
+      color-warning-text: map.get($_dark, 'warning-12'),
       color-warning: map.get($_dark, 'warning-9'),
       color-warning-hover: map.get($_dark, 'warning-8'),
       color-warning-active: map.get($_dark, 'warning-7'),
       color-warning-disabled: map.get($_dark, 'warning-6'),
+      color-warning-light: map.get($_dark, 'warning-3'),
       // Info
+      color-info-text: map.get($_dark, 'info-12'),
       color-info: map.get($_dark, 'info-9'),
       color-info-hover: map.get($_dark, 'info-8'),
       color-info-active: map.get($_dark, 'info-7'),
-      color-info-disabled: map.get($_dark, 'info-6')
+      color-info-disabled: map.get($_dark, 'info-6'),
+      color-info-light: map.get($_dark, 'info-3')
     ),
     base.$borders,
     base.$sizes

@@ -16,7 +16,7 @@
     button__border-style: map.get($base, 'border-style'),
     button__border-color: map.get($base, 'color-border'),
     // primary
-    button--primary__color: map.get($base, 'color-text-interactive'),
+    button--primary__color: map.get($base, 'color-interactive-text'),
     button--primary__color-disabled: map.get($base, 'color-text-placeholder'),
     button--primary__background: map.get($base, 'color-interactive'),
     button--primary__background-hover: map.get($base, 'color-interactive-hover'),
@@ -30,14 +30,14 @@
     button--secondary__background-active: map.get($base, 'color-surface'),
     button--secondary__background-disabled: map.get($base, 'color-border-light'),
     // error
-    button--error__color: map.get($base, 'color-text-interactive'),
+    button--error__color: map.get($base, 'color-interactive-text'),
     button--error__color-disabled: map.get($base, 'color-text-placeholder'),
     button--error__background: map.get($base, 'color-error'),
     button--error__background-hover: map.get($base, 'color-error-hover'),
     button--error__background-active: map.get($base, 'color-error-active'),
     button--error__background-disabled: map.get($base, 'color-error-disabled'),
     // warning
-    button--warning__color: map.get($base, 'color-text-interactive'),
+    button--warning__color: map.get($base, 'color-interactive-text'),
     button--warning__color-disabled: map.get($base, 'color-text-placeholder'),
     button--warning__background: map.get($base, 'color-warning'),
     button--warning__background-hover: map.get($base, 'color-warning-hover'),

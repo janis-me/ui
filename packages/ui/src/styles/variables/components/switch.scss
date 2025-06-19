@@ -19,6 +19,6 @@
     switch__border-width: map.get($base, 'border-width'),
     switch__border-radius: 9999px,
     switch__border-style: solid,
-    switch__thumb-background-color: map.get($base, 'color-text-interactive')
+    switch__thumb-background-color: map.get($base, 'color-interactive-text')
   );
 }
