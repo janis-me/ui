@@ -1,0 +1,44 @@
+.themed-ui__toggle-group {
+  display: inline-flex;
+  border-radius: 4px;
+
+  &__item {
+    background-color: themed('color-elevated');
+    color: themed('color-text-primary');
+    height: 35px;
+    width: 35px;
+    display: flex;
+    font-size: 15px;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1px;
+    user-select: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__item:first-child {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  &__item:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  &__item:hover {
+    background-color: themed('color-interactive-light');
+  }
+
+  &__item[data-state='on'] {
+    background-color: themed('color-interactive');
+    color: themed('color-interactive-text');
+  }
+
+  &__item:focus {
+    position: relative;
+  }
+}

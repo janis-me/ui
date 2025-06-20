@@ -12,5 +12,22 @@ import * as RadioGroup from './components/RadioGroup/RadioGroup';
 import * as Select from './components/Select/Select';
 import * as Slider from './components/Slider/Slider';
 import * as Switch from './components/Switch/Switch';
+import * as ToggleGroup from './components/ToggleGroup/ToggleGroup';
 
-export { Accordion, Between, Button, Card, Checkbox, ContextMenu, DropdownMenu, Label, NavigationMenu, Progress, RadioGroup, Select, Slider, Switch };
+export {
+  Accordion,
+  Between,
+  Button,
+  Card,
+  Checkbox,
+  ContextMenu,
+  DropdownMenu,
+  Label,
+  NavigationMenu,
+  Progress,
+  RadioGroup,
+  Select,
+  Slider,
+  Switch,
+  ToggleGroup,
+};
