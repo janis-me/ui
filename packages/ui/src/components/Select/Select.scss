@@ -54,7 +54,7 @@
 
     height: themed('size-6');
     color: themed('color-text-primary');
-    padding: 0 themed('size-4');
+    padding: 0 themed('size-3') 0 calc(themed('size-5') + themed('size-3'));
 
     &:focus-visible {
       outline: none;
