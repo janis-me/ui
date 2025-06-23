@@ -1,4 +1,4 @@
-import { CheckIcon, ChevronDownIcon, ChevronRightIcon, DotFilledIcon, HamburgerMenuIcon } from '@radix-ui/react-icons';
+import { CheckIcon, ChevronDownIcon } from '@radix-ui/react-icons';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Select } from '@janis.me/ui';
@@ -37,7 +37,7 @@ export const Simple: Story = {
 
         <Select.Content position="popper">
           <Select.Item value="apple">
-            <Select.ItemText>Apple</Select.ItemText>
+            <Select.ItemText>A very unknown fruit with a long name</Select.ItemText>
             <Select.ItemIndicator>
               <CheckIcon />
             </Select.ItemIndicator>

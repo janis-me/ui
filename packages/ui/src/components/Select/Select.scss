@@ -13,6 +13,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    & > span:first-of-type {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   &__content,
@@ -58,6 +64,12 @@
 
     &:focus-visible {
       outline: none;
+    }
+
+    & > span:first-of-type {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     &[data-disabled] {
