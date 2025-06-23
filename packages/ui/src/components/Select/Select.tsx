@@ -4,7 +4,7 @@ import React from 'react';
 
 import './Select.scss';
 
-export type DropdownProps = Select.SelectProps;
+export type SelectProps = Select.SelectProps;
 export type ValueProps = Select.SelectValueProps;
 export type IconProps = Select.SelectIconProps;
 export type TriggerProps = Select.SelectTriggerProps;

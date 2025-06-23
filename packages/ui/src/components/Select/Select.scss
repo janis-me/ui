@@ -5,9 +5,9 @@
     border-radius: 3px;
     cursor: pointer;
     transition: all 100ms ease-in-out;
-    background-color: themed('color-border');
+    background-color: themed('color-elevated');
     color: themed('color-text-primary');
-    height: calc(themed('size-3') + themed('size-2'));
+    height: themed('size-6');
     font-size: 1rem;
     width: 100%;
     display: flex;
@@ -52,9 +52,9 @@
     position: relative;
     user-select: none;
 
-    height: calc(themed('size-3') + themed('size-2'));
+    height: themed('size-6');
     color: themed('color-text-primary');
-    padding: 0 themed('size-4') 0 calc(themed('size-5') + themed('size-3'));
+    padding: 0 themed('size-4');
 
     &:focus-visible {
       outline: none;
@@ -66,14 +66,21 @@
     }
 
     &[data-highlighted] {
-      background-color: themed('color-border');
+      background-color: themed('color-elevated');
       color: themed('color-text-primary');
     }
   }
 
+  &__item,
+  &__checkbox-item,
+  &__radio-item,
+  &__sub-trigger {
+    cursor: pointer;
+  }
+
   &__sub-trigger {
     &[data-state='open'] {
-      background-color: themed('color-background');
+      background-color: themed('color-elevated');
     }
   }
 
