@@ -1,12 +1,14 @@
 .themed-ui__toggle-group {
-  display: inline-flex;
-  border-radius: 4px;
+  &__root {
+    display: inline-flex;
+    border-radius: 4px;
+    height: themed('size-6');
+  }
 
   &__item {
     background-color: themed('color-elevated');
     color: themed('color-text-primary');
-    height: 35px;
-    width: 35px;
+    width: themed('size-6');
     display: flex;
     font-size: 15px;
     line-height: 1;

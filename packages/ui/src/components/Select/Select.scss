@@ -6,6 +6,8 @@
     cursor: pointer;
     transition: all 100ms ease-in-out;
     background-color: themed('color-elevated');
+    border: 1px solid themed('color-border-light');
+    border-radius: themed('border-radius');
     color: themed('color-text-primary');
     height: themed('size-6');
     font-size: 1rem;
@@ -26,6 +28,8 @@
     overflow: hidden;
     border-radius: themed('size-3');
     background-color: themed('color-surface');
+    border: 1px solid themed('color-border-light');
+    border-radius: themed('border-radius');
     width: var(--radix-select-trigger-width);
     max-height: var(--radix-select-content-available-height);
 

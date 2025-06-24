@@ -16,8 +16,8 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
 }
 
 export const Root = React.forwardRef<React.ComponentRef<React.ElementType<'button'>>, ButtonProps>(
-  ({ className, children, primary = true, secondary, info, success, warning, error, round, large, small, ...props }, forwardedRef) => {
-    const _primary = !secondary || (primary && !secondary);
+  ({ className, children, primary, secondary, info, success, warning, error, round, large, small, ...props }, forwardedRef) => {
+    const _primary = primary || (!secondary && !info && !success && !warning && !error);
     const _secondary = secondary;
     const _info = info;
     const _success = success;
